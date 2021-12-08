@@ -1,15 +1,26 @@
-@import url('https://fonts.googleapis.com/css2?family=Barlow&family=Barlow+Condensed&family=Bellefair&display=swap');
-
-
+@import url('https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@400;700&family=Barlow:wght@400;700&family=Bellefair&display=swap');
 $font-base-family-1: 'Barlow';
 $font-base-family-2: 'Barlow Condensed';
 $font-base-family-3: 'Bellefair';
 
 
-$font-size-body: 1.125rem;
-
 $font-size-v1: 9.375rem; //150px
 $font-size-v2: 6.25rem; //100px
-$font-size-v3: 3.5rem; //56px
-$font-size-v4: 2rem; //32px
-$font-size-v5: 1.75rem; //28px
+$font-size-v3: 5rem; //80px
+$font-size-v4: 3.5rem; //56px
+$font-size-v5: 2.5rem; //40px
+$font-size-v6: 2rem; //32px
+$font-size-v7: 1.75rem; //28px
+$font-size-v8: 1.5rem; //24px
+$font-size-v9: 1.25rem; //20px
+$font-size-v10: 1.125rem; //18px
+$font-size-v11: 1rem; //16px
+$font-size-v12: .938rem; //15px
+$font-size-v13: .875rem; //14px
+
+$font-weight-400: 400;
+$font-weight-700: 700;
+
+
+$text-transfrom-upper: uppercase;
+$text-transfrom-capitalize: capitalize;

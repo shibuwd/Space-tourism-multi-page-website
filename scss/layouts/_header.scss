@@ -1,0 +1,127 @@
+#header .header {
+    height: auto;
+    background-color: transparent;
+
+    .nav-bar {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        width: 100%;
+        height: 100%;
+        padding: 0rem;
+        background-color: $color-white;
+
+        .nav-list {
+            ul {
+                position: absolute;
+                background-color: $color-white;
+                width: 100vw;
+                height: 50vh;
+                left: -100%;
+                display: flex;
+                flex-direction: column;
+                justify-content: center;
+                align-items: center;
+                z-index: 1;
+                overflow-x: hidden;
+                transition: .6s cubic-bezier(0, 0.55, 0.45, 1) left;
+                z-index: 9999;
+
+                &.active {
+                    left: 0%;
+                }
+
+                li {
+                    a {
+                        text-decoration: none;
+                        color: $color-very-dark;
+                        text-transform: uppercase;
+                        // padding: .8rem;
+                        margin: 1rem;
+                        display: block;
+                        font-family: $font-base-family-2;
+                        font-weight: $font-weight-400;
+                        font-size: $font-size-v11;
+                        letter-spacing: 2px;
+
+                        &::after {
+                            position: absolute;
+                            top: 50%;
+                            left: 50%;
+                            transform: translate(-50%, -50%) scale(0);
+                            letter-spacing: 50px;
+                            z-index: -1;
+                        }
+
+                        &:hover &::after {
+                            transform: translate(-50%, -50%) scale(1);
+                            letter-spacing: initial;
+                        }
+
+                        &:hover,
+                        &:focus {
+                            color: $color-very-dark;
+                            transition: 0.6s cubic-bezier(0.5, 1, 0.89, 1);
+                        }
+                    }
+                }
+            }
+
+            .hamburger {
+                height: 60px;
+                width: 60px;
+                display: inline-block;
+                position: relative;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                z-index: 100;
+                cursor: pointer;
+
+                &:after {
+                    position: absolute;
+                    content: '';
+                    height: 100%;
+                    width: 100%;
+                    animation: hamburger_puls 3s ease infinite;
+                }
+
+                .bar {
+                    height: 3px;
+                    width: 30px;
+                    position: relative;
+                    background-color: $color-very-dark;
+                    z-index: -1;
+
+                    &::after,
+                    &::before {
+                        content: '';
+                        position: absolute;
+                        height: 100%;
+                        width: 100%;
+                        left: 0;
+                        background-color: $color-very-dark;
+                        transition: .3s ease;
+                        transition-property: top, bottom;
+                    }
+
+                    &::after {
+                        top: 8px;
+                    }
+
+                    &::before {
+                        bottom: 8px;
+                    }
+                }
+            }
+
+             .hamburger.active .bar::before {
+                 bottom: 0;
+             }
+
+             .hamburger.active .bar::after {
+                 top: 0;
+             }
+        }
+    }
+}

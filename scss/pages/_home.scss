@@ -1,0 +1,75 @@
+.hero-container {
+    position: absolute;
+    color: $color-white;
+    text-align: center;
+    top: 0;
+
+    .hero-img picture {
+        position: relative;
+        background-position: center;
+        background-size: cover;
+        width: 100vw;
+        // background: #0B0D17;
+    }
+
+    .space {
+        position: absolute;
+        // width: 327px;
+        height: 276px;
+        top: 112px;
+
+        span {
+            font-family: $font-base-family-2;
+            font-size: $font-size-v11;
+            letter-spacing: 2.7px;
+            text-transform: $text-transfrom-upper;
+        }
+
+        h1 {
+            font-family: $font-base-family-3;
+            text-transform: $text-transfrom-upper;
+            font-size: $font-size-v3;
+            line-height: 120px;
+        }
+
+        p {
+            font-size: $font-size-v12;
+            line-height: 25px;
+            padding: 0 1.3rem;
+        }
+
+        .explore-btn {
+            text-align: center;
+            font-family: $font-base-family-3;
+            font-size: $font-size-v9;
+            text-transform: $text-transfrom-upper;
+            color: $color-very-dark;
+            height: 150px;
+            width: 150px;
+            border-radius: 50%;
+            background-color: $color-white;
+            margin: 0 auto;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin-top: 4.5rem;
+            cursor: pointer;
+
+            // &::before {
+
+            //     background-color: $color-white;
+            //     height: 150px;
+            //     width: 150px;
+            //     opacity: .1;
+            // }
+
+            &:hover {
+                -webkit-box-shadow: 0 0 0 50px hsla(0, 0%, 86%, 0.1);
+                box-shadow: 0 0 0 50px hsla(0, 0%, 86%, 0.1);
+                -webkit-transition: 0.6s cubic-bezier(0.5, 1, 0.89, 1);
+                -o-transition: 0.6s cubic-bezier(0.5, 1, 0.89, 1);
+                transition: 0.6s cubic-bezier(0.5, 1, 0.89, 1);
+            }
+        }
+    }
+}

@@ -3,13 +3,17 @@
     background-color: transparent;
 
     .nav-bar {
+        .brand {
+            z-index: 9;
+        }
+
         display: flex;
         align-items: center;
         justify-content: space-between;
         width: 100%;
         height: 100%;
-        padding: 0rem;
-        background-color: $color-white;
+        padding: .5rem .8rem;
+        // background-color: transparent;
 
         .nav-list {
             ul {
@@ -19,7 +23,9 @@
                 backdrop-filter: blur(51.5485px);
                 width: 60vw;
                 height: 70vh;
-                left: 100%;
+                right: 0%;
+                left: -100%;
+                top: 0;
                 display: flex;
                 flex-direction: column;
                 justify-content: center;
@@ -27,7 +33,7 @@
                 z-index: 1;
                 overflow-x: hidden;
                 transition: .6s cubic-bezier(0, 0.55, 0.45, 1) left;
-                z-index: 9999;
+                z-index: 3;
 
                 &.active {
                     left: 40%;
@@ -51,26 +57,58 @@
                         font-weight: $font-weight-400;
                         font-size: $font-size-v11;
                         letter-spacing: 2px;
+                        position: relative;
 
-                        &::after {
+                        // &::after {
+                        //     position: absolute;
+                        //     top: 50%;
+                        //     left: 50%;
+                        //     transform: translate(-50%, -50%) scale(0);
+                        //     letter-spacing: 50px;
+                        //     z-index: -1;
+                        // }
+
+                        // &:hover &::after {
+                        //     transform: translate(-50%, -50%) scale(1);
+                        //     letter-spacing: initial;
+                        // }
+
+                        &:before,
+                        &:after {
+                            content: '';
                             position: absolute;
-                            top: 50%;
-                            left: 50%;
-                            transform: translate(-50%, -50%) scale(0);
-                            letter-spacing: 50px;
-                            z-index: -1;
+                            top: 100%;
+                            width: 15%;
+                            height: 2px;
+                            background: none;
+                            transition: .7s cubic-bezier(0.5, 1, 0.89, 1);
                         }
 
-                        &:hover &::after {
-                            transform: translate(-50%, -50%) scale(1);
-                            letter-spacing: initial;
+                        &:before {
+                            left: fixed;
                         }
 
-                        &:hover,
-                        &:focus {
-                            // color: $color-very-dark;
-                            transition: 0.6s cubic-bezier(0.5, 1, 0.89, 1);
+                        &:after {
+                            right: 0%;
                         }
+
+                        &:hover:before,
+                        &:focus:before,
+                        &:hover:after,
+                        &:focus:after {
+                            width: 50%;
+                            background: $color-white;
+                        }
+
+                        &:active {
+                            color: $color-white;
+                        }
+
+                        // &:hover,
+                        // &:focus {
+
+                        //     transition: 0.6s cubic-bezier(0.5, 1, 0.89, 1);
+                        // }
                     }
                 }
             }
@@ -83,7 +121,7 @@
                 display: flex;
                 align-items: center;
                 justify-content: center;
-                z-index: 100;
+                z-index: 10;
                 cursor: pointer;
 
                 &:after {
@@ -98,7 +136,7 @@
                     height: 3px;
                     width: 30px;
                     position: relative;
-                    background-color: $color-very-dark;
+                    background-color: $color-white;
                     z-index: -1;
 
                     &::after,
@@ -108,7 +146,7 @@
                         height: 100%;
                         width: 100%;
                         left: 0;
-                        background-color: $color-very-dark;
+                        background-color: $color-white;
                         transition: .3s ease;
                         transition-property: top, bottom;
                     }

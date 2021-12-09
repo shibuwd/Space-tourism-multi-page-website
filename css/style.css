@@ -1,10 +1,12 @@
 @import url("https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@400;700&family=Barlow:wght@400;700&family=Bellefair&display=swap");
+
 *,
 *::after,
 *::before {
   box-sizing: border-box;
   margin: 0;
   padding: 0;
+  text-decoration: none;
 }
 
 img,
@@ -22,31 +24,16 @@ body {
   height: 100vh;
   line-height: 1.5;
   overflow-x: hidden;
-  text-decoration: none;
 }
 
-h1 {
-  font-size: 9.375rem;
-  font-family: "Barlow";
-}
-
-h2 {
-  font-size: 6.25rem;
-  font-family: "Barlow";
-}
-
-h3 {
-  font-size: 5rem;
-  font-family: "Barlow";
-}
-
+h1,
+h2,
+h3,
 h4 {
-  font-size: 3.5rem;
-  font-family: "Barlow";
+  font-family: "Bellefair";
 }
 
 h5 {
-  font-size: 2.5rem;
   font-family: "Barlow Condensed";
 }
 
@@ -58,15 +45,20 @@ li {
   height: auto;
   background-color: transparent;
 }
+
 #header .header .nav-bar {
   display: flex;
   align-items: center;
   justify-content: space-between;
   width: 100%;
   height: 100%;
-  padding: 0rem;
-  background-color: white;
+  padding: 0.5rem 0.8rem;
 }
+
+#header .header .nav-bar .brand {
+  z-index: 9;
+}
+
 #header .header .nav-bar .nav-list ul {
   position: absolute;
   background: rgba(160, 147, 147, 0.274);
@@ -74,7 +66,9 @@ li {
   backdrop-filter: blur(51.5485px);
   width: 60vw;
   height: 70vh;
-  left: 100%;
+  right: 0%;
+  left: -100%;
+  top: 0;
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -82,11 +76,13 @@ li {
   z-index: 1;
   overflow-x: hidden;
   transition: 0.6s cubic-bezier(0, 0.55, 0.45, 1) left;
-  z-index: 9999;
+  z-index: 3;
 }
+
 #header .header .nav-bar .nav-list ul.active {
   left: 40%;
 }
+
 #header .header .nav-bar .nav-list ul li a {
   text-decoration: none;
   color: white;
@@ -98,25 +94,44 @@ li {
   font-weight: 400;
   font-size: 1rem;
   letter-spacing: 2px;
+  position: relative;
 }
+
 #header .header .nav-bar .nav-list ul li a span {
   font-weight: 700;
 }
-#header .header .nav-bar .nav-list ul li a::after {
+
+#header .header .nav-bar .nav-list ul li a:before,
+#header .header .nav-bar .nav-list ul li a:after {
+  content: "";
   position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%) scale(0);
-  letter-spacing: 50px;
-  z-index: -1;
+  top: 100%;
+  width: 15%;
+  height: 2px;
+  background: none;
+  transition: 0.7s cubic-bezier(0.5, 1, 0.89, 1);
 }
-#header .header .nav-bar .nav-list ul li a:hover #header .header .nav-bar .nav-list ul li a::after {
-  transform: translate(-50%, -50%) scale(1);
-  letter-spacing: initial;
+
+#header .header .nav-bar .nav-list ul li a:before {
+  left: fixed;
 }
-#header .header .nav-bar .nav-list ul li a:hover, #header .header .nav-bar .nav-list ul li a:focus {
-  transition: 0.6s cubic-bezier(0.5, 1, 0.89, 1);
+
+#header .header .nav-bar .nav-list ul li a:after {
+  right: 0%;
 }
+
+#header .header .nav-bar .nav-list ul li a:hover:before,
+#header .header .nav-bar .nav-list ul li a:focus:before,
+#header .header .nav-bar .nav-list ul li a:hover:after,
+#header .header .nav-bar .nav-list ul li a:focus:after {
+  width: 50%;
+  background: white;
+}
+
+#header .header .nav-bar .nav-list ul li a:active {
+  color: white;
+}
+
 #header .header .nav-bar .nav-list .hamburger {
   height: 60px;
   width: 60px;
@@ -125,9 +140,10 @@ li {
   display: flex;
   align-items: center;
   justify-content: center;
-  z-index: 100;
+  z-index: 10;
   cursor: pointer;
 }
+
 #header .header .nav-bar .nav-list .hamburger:after {
   position: absolute;
   content: "";
@@ -135,34 +151,107 @@ li {
   width: 100%;
   animation: hamburger_puls 3s ease infinite;
 }
+
 #header .header .nav-bar .nav-list .hamburger .bar {
   height: 3px;
   width: 30px;
   position: relative;
-  background-color: #0c0e18;
+  background-color: white;
   z-index: -1;
 }
-#header .header .nav-bar .nav-list .hamburger .bar::after, #header .header .nav-bar .nav-list .hamburger .bar::before {
+
+#header .header .nav-bar .nav-list .hamburger .bar::after,
+#header .header .nav-bar .nav-list .hamburger .bar::before {
   content: "";
   position: absolute;
   height: 100%;
   width: 100%;
   left: 0;
-  background-color: #0c0e18;
+  background-color: white;
   transition: 0.3s ease;
   transition-property: top, bottom;
 }
+
 #header .header .nav-bar .nav-list .hamburger .bar::after {
   top: 8px;
 }
+
 #header .header .nav-bar .nav-list .hamburger .bar::before {
   bottom: 8px;
 }
+
 #header .header .nav-bar .nav-list .hamburger.active .bar::before {
   bottom: 0;
 }
+
 #header .header .nav-bar .nav-list .hamburger.active .bar::after {
   top: 0;
+}
+
+.hero-container {
+  position: absolute;
+  color: white;
+  text-align: center;
+  top: 0;
+}
+
+.hero-container .hero-img picture {
+  position: relative;
+  background-position: center;
+  background-size: cover;
+  width: 100vw;
+}
+
+.hero-container .space {
+  position: absolute;
+  height: 276px;
+  top: 112px;
+}
+
+.hero-container .space span {
+  font-family: "Barlow Condensed";
+  font-size: 1rem;
+  letter-spacing: 2.7px;
+  text-transform: uppercase;
+}
+
+.hero-container .space h1 {
+  font-family: "Bellefair";
+  text-transform: uppercase;
+  font-size: 5rem;
+  line-height: 120px;
+}
+
+.hero-container .space p {
+  font-size: 0.938rem;
+  line-height: 25px;
+  padding: 0 1.3rem;
+}
+
+.hero-container .space .explore-btn {
+  text-align: center;
+  font-family: "Bellefair";
+  font-size: 1.25rem;
+  text-transform: uppercase;
+  color: #0c0e18;
+  height: 150px;
+  width: 150px;
+  border-radius: 50%;
+  background-color: white;
+  margin: 0 auto;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-top: 4.5rem;
+  cursor: pointer;
+}
+
+.hero-container .space .explore-btn:hover {
+  -webkit-box-shadow: 0 0 0 50px rgba(219, 219, 219, 0.1);
+  box-shadow: 0 0 0 50px rgba(219, 219, 219, 0.1);
+  -webkit-transition: 0.6s cubic-bezier(0.5, 1, 0.89, 1);
+  -o-transition: 0.6s cubic-bezier(0.5, 1, 0.89, 1);
+  transition: 0.6s cubic-bezier(0.5, 1, 0.89, 1);
 }
 
 /*# sourceMappingURL=style.css.map */

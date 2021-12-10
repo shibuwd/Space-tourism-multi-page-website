@@ -1,11 +1,8 @@
 .hero-container {
-    position: absolute;
-    color: $color-white;
-    text-align: center;
-    top: 0;
-    display: flex;
-    align-items: center;
-    justify-content: center;
+    @include heroStyle;
+     // display: flex;
+    // align-items: center;
+    // justify-content: center;
 
     @include media('>largePhone') {
         display: flex;
@@ -14,12 +11,7 @@
     }
 
     .hero-img picture {
-        position: relative;
-        background-position: center;
-        background-size: cover;
-        background-repeat: no-repeat;
-        width: 100vw;
-        height: auto;
+        @include heroImage;
     }
 
     .space {
@@ -47,7 +39,7 @@
             span {
                 font-family: $font-base-family-2;
                 font-size: $font-size-v11;
-                letter-spacing: 2.7px;
+                letter-spacing: $letter-spacing-1;
                 text-transform: $text-transfrom-upper;
 
                 @include media('>largePhone') {

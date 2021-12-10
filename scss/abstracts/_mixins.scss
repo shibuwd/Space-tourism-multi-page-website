@@ -1,0 +1,18 @@
+@mixin heroStyle {
+    position: absolute;
+    color: $color-white;
+    text-align: center;
+    top: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+@mixin heroImage {
+    position: relative;
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    width: 100vw;
+    height: auto;
+}

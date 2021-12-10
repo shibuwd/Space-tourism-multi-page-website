@@ -3,6 +3,8 @@
 
 @import "./abstracts/variables";
 @import "./abstracts/breakpoints";
+@import "./abstracts/mixins";
 
 @import "./layouts/header";
 @import "./pages/home";
+@import "pages/destination";

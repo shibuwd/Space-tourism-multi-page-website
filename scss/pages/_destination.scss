@@ -1,0 +1,66 @@
+.moon-container {
+    @include heroStyle;
+
+    .moon-img {
+        @include heroImage;
+    }
+
+    .destination__container {
+        position: absolute;
+        width: 327px;
+        height: 704px;
+        left: 24px;
+        top: 88px;
+
+        .destination__top {
+            h4 {
+                font-size: $font-size-v10;
+                text-transform: $text-transfrom-upper;
+                font-family: $font-base-family-2;
+                letter-spacing: $letter-spacing-1;
+                font-weight: $font-weight-400;
+                line-height: 20px;
+
+                span {
+                    font-weight: $font-weight-700;
+                    opacity: 25%;
+                }
+            }
+
+            .moon {
+                background-image: url(../../assets/destination/image-moon.png);
+                background-position: center;
+                background-repeat: no-repeat;
+                background-size: cover;
+                width: 170px;
+                height: 170px;
+                display: inline-block;
+                margin-top: 30px;
+            }
+        }
+
+        .destination__bottom {
+            .page__links {
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                flex-direction: row;
+                margin: 1.5rem 0;
+
+                li {
+                    a {
+                        font-family: $font-base-family-2;
+                        font-size: $font-size-v13;
+                        text-transform: $text-transfrom-upper;
+                        color: $color-white;
+                        padding: 0 1rem;
+                        letter-spacing: $letter-spacing-1;
+
+                    }
+                }
+            }
+        }
+
+    }
+
+}

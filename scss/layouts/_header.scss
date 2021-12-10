@@ -3,6 +3,12 @@
     background-color: transparent;
 
     .nav-bar {
+        margin-top: .6rem;
+
+        @include media('>largePhone') {
+            margin-top: 0;
+        }
+
         .brand {
             z-index: 9;
             height: 48px;
@@ -72,7 +78,7 @@
                         display: flex;
                         align-items: center;
                         justify-content: center;
-                        background: rgba(22, 20, 20, 0.52);
+                        background: rgba(22, 20, 20, 0.589);
                         height: 76px;
                     }
 
@@ -88,10 +94,10 @@
                         font-family: $font-base-family-2;
                         font-weight: $font-weight-400;
                         font-size: $font-size-v11;
-                        letter-spacing: 2px;
+                        letter-spacing: $letter-spacing-1;
 
                         &:before,
-                        &:after{
+                        &:after {
                             content: '';
                             position: absolute;
                             top: 100%;
@@ -100,10 +106,7 @@
                             // background: none;
                             transition: .8s cubic-bezier(0.5, 1, 0.89, 1);
 
-                            &:active {
-                                color: red;
-                                height: 3px;
-                            }
+
                         }
 
                         // &:before {
@@ -122,11 +125,12 @@
                             background: $color-white;
                         }
 
+
                         span {
                             font-weight: $font-weight-700;
 
                             @include media('>largePhone') {
-                                margin-right: .5rem;
+                                margin-right: .2rem;
                             }
                         }
                     }
@@ -194,6 +198,4 @@
             }
         }
     }
-
-
 }

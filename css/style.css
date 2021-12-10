@@ -50,11 +50,17 @@ li {
   background-color: transparent;
 }
 #header .header .nav-bar {
+  margin-top: 0.6rem;
   display: flex;
   align-items: center;
   justify-content: space-between;
   width: 100%;
   height: 100%;
+}
+@media (min-width: 576px) {
+  #header .header .nav-bar {
+    margin-top: 0;
+  }
 }
 #header .header .nav-bar .brand {
   z-index: 9;
@@ -116,7 +122,7 @@ li {
     display: flex;
     align-items: center;
     justify-content: center;
-    background: rgba(22, 20, 20, 0.52);
+    background: rgba(22, 20, 20, 0.589);
     height: 76px;
   }
 }
@@ -130,7 +136,7 @@ li {
   font-family: "Barlow Condensed";
   font-weight: 400;
   font-size: 1rem;
-  letter-spacing: 2px;
+  letter-spacing: 2.7px;
 }
 #header .header .nav-bar .nav-list ul li a:before, #header .header .nav-bar .nav-list ul li a:after {
   content: "";
@@ -139,10 +145,6 @@ li {
   width: 15%;
   height: 3px;
   transition: 0.8s cubic-bezier(0.5, 1, 0.89, 1);
-}
-#header .header .nav-bar .nav-list ul li a:before:active, #header .header .nav-bar .nav-list ul li a:after:active {
-  color: red;
-  height: 3px;
 }
 #header .header .nav-bar .nav-list ul li a:after {
   right: 0%;
@@ -156,7 +158,7 @@ li {
 }
 @media (min-width: 576px) {
   #header .header .nav-bar .nav-list ul li a span {
-    margin-right: 0.5rem;
+    margin-right: 0.2rem;
   }
 }
 #header .header .nav-bar .nav-list .hamburger {
@@ -324,6 +326,68 @@ li {
   .hero-container .space .explore-btn {
     margin: 0;
   }
+}
+
+.moon-container {
+  position: absolute;
+  color: white;
+  text-align: center;
+  top: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.moon-container .moon-img {
+  position: relative;
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+  width: 100vw;
+  height: auto;
+}
+.moon-container .destination__container {
+  position: absolute;
+  width: 327px;
+  height: 704px;
+  left: 24px;
+  top: 88px;
+}
+.moon-container .destination__container .destination__top h4 {
+  font-size: 1.125rem;
+  text-transform: uppercase;
+  font-family: "Barlow Condensed";
+  letter-spacing: 2.7px;
+  font-weight: 400;
+  line-height: 20px;
+}
+.moon-container .destination__container .destination__top h4 span {
+  font-weight: 700;
+  opacity: 25%;
+}
+.moon-container .destination__container .destination__top .moon {
+  background-image: url(../../assets/destination/image-moon.png);
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  width: 170px;
+  height: 170px;
+  display: inline-block;
+  margin-top: 30px;
+}
+.moon-container .destination__container .destination__bottom .page__links {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: row;
+  margin: 1.5rem 0;
+}
+.moon-container .destination__container .destination__bottom .page__links li a {
+  font-family: "Barlow Condensed";
+  font-size: 0.875rem;
+  text-transform: uppercase;
+  color: white;
+  padding: 0 1rem;
+  letter-spacing: 2.7px;
 }
 
 /*# sourceMappingURL=style.css.map */

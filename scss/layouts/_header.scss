@@ -5,6 +5,9 @@
     .nav-bar {
         .brand {
             z-index: 9;
+            height: 48px;
+            width: 48px;
+            margin-left: 1.2rem;
         }
 
         display: flex;
@@ -12,17 +15,30 @@
         justify-content: space-between;
         width: 100%;
         height: 100%;
-        padding: .5rem .8rem;
+        // padding: .5rem .8rem;
         // background-color: transparent;
 
+        @include media('>largePhone') {
+            height: 75px;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+        }
+
         .nav-list {
+            @include media('>largePhone') {
+                display: flex;
+                align-items: center;
+                justify-content: center;
+            }
+
             ul {
                 position: absolute;
-                background: rgba(160, 147, 147, 0.274);
-                -webkit-backdrop-filter: blur(51.5485px);
-                backdrop-filter: blur(51.5485px);
-                width: 60vw;
-                height: 70vh;
+                background: rgba(56, 54, 54, 0.883);
+                -webkit-backdrop-filter: blur(15px);
+                backdrop-filter: blur(15px);
+                width: 75vw;
+                height: 80vh;
                 right: 0%;
                 left: -100%;
                 top: 0;
@@ -35,17 +51,33 @@
                 transition: .6s cubic-bezier(0, 0.55, 0.45, 1) left;
                 z-index: 3;
 
+                @include media('>largePhone') {
+                    position: initial;
+                    display: flex;
+                    flex-direction: row;
+                    justify-content: center;
+                    height: auto;
+                    width: auto;
+                    background-color: transparent;
+                    padding-right: 0rem;
+                }
+
                 &.active {
-                    left: 40%;
+                    left: 25%;
                 }
 
                 li {
-                    a {
-                        span {
-                            font-weight: $font-weight-700;
-                        }
 
-                        text-decoration: none;
+                    @include media('>largePhone') {
+                        display: flex;
+                        align-items: center;
+                        justify-content: center;
+                        background: rgba(22, 20, 20, 0.52);
+                        height: 76px;
+                    }
+
+                    a {
+                        position: relative;
                         color: $color-white;
                         text-transform: uppercase;
                         // padding: .8rem;
@@ -57,36 +89,26 @@
                         font-weight: $font-weight-400;
                         font-size: $font-size-v11;
                         letter-spacing: 2px;
-                        position: relative;
-
-                        // &::after {
-                        //     position: absolute;
-                        //     top: 50%;
-                        //     left: 50%;
-                        //     transform: translate(-50%, -50%) scale(0);
-                        //     letter-spacing: 50px;
-                        //     z-index: -1;
-                        // }
-
-                        // &:hover &::after {
-                        //     transform: translate(-50%, -50%) scale(1);
-                        //     letter-spacing: initial;
-                        // }
 
                         &:before,
-                        &:after {
+                        &:after{
                             content: '';
                             position: absolute;
                             top: 100%;
                             width: 15%;
-                            height: 2px;
-                            background: none;
-                            transition: .7s cubic-bezier(0.5, 1, 0.89, 1);
+                            height: 3px;
+                            // background: none;
+                            transition: .8s cubic-bezier(0.5, 1, 0.89, 1);
+
+                            &:active {
+                                color: red;
+                                height: 3px;
+                            }
                         }
 
-                        &:before {
-                            left: fixed;
-                        }
+                        // &:before {
+                        //     left: fixed;
+                        // }
 
                         &:after {
                             right: 0%;
@@ -100,15 +122,13 @@
                             background: $color-white;
                         }
 
-                        &:active {
-                            color: $color-white;
+                        span {
+                            font-weight: $font-weight-700;
+
+                            @include media('>largePhone') {
+                                margin-right: .5rem;
+                            }
                         }
-
-                        // &:hover,
-                        // &:focus {
-
-                        //     transition: 0.6s cubic-bezier(0.5, 1, 0.89, 1);
-                        // }
                     }
                 }
             }
@@ -123,6 +143,10 @@
                 justify-content: center;
                 z-index: 10;
                 cursor: pointer;
+
+                @include media('>largePhone') {
+                    display: none;
+                }
 
                 &:after {
                     position: absolute;
@@ -170,4 +194,6 @@
             }
         }
     }
+
+
 }

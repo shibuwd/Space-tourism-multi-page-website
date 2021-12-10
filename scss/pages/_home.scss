@@ -3,39 +3,82 @@
     color: $color-white;
     text-align: center;
     top: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    @include media('>largePhone') {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
 
     .hero-img picture {
         position: relative;
         background-position: center;
         background-size: cover;
+        background-repeat: no-repeat;
         width: 100vw;
-        // background: #0B0D17;
+        height: auto;
     }
 
     .space {
         position: absolute;
-        // width: 327px;
-        height: 276px;
-        top: 112px;
 
-        span {
-            font-family: $font-base-family-2;
-            font-size: $font-size-v11;
-            letter-spacing: 2.7px;
-            text-transform: $text-transfrom-upper;
+        @include media('>tabletBig') {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            width: 100%;
+            flex-direction: row;
+            padding: 0 6rem;
+            text-align: left;
         }
 
-        h1 {
-            font-family: $font-base-family-3;
-            text-transform: $text-transfrom-upper;
-            font-size: $font-size-v3;
-            line-height: 120px;
+        @include media('>smallDesktop') {
+            padding: 0 12rem;
         }
 
-        p {
-            font-size: $font-size-v12;
-            line-height: 25px;
-            padding: 0 1.3rem;
+        .space-desc {
+            @include media('>largePhone') {
+                margin-top: 8rem;
+            }
+
+            span {
+                font-family: $font-base-family-2;
+                font-size: $font-size-v11;
+                letter-spacing: 2.7px;
+                text-transform: $text-transfrom-upper;
+
+                @include media('>largePhone') {
+                    font-size: $font-size-v9;
+                }
+            }
+
+            h1 {
+                font-family: $font-base-family-3;
+                text-transform: $text-transfrom-upper;
+                font-size: $font-size-v3;
+                line-height: 90px;
+
+                @include media('>largePhone') {
+                    font-size: $font-size-v1;
+                    line-height: 180px;
+                }
+            }
+
+            p {
+                font-size: $font-size-v12;
+                line-height: 25px;
+                padding: 0 1.3rem;
+
+
+                @include media('>largePhone') {
+                    font-size: $font-base-family-1;
+                    margin-bottom: 5rem;
+                    width: 445px;
+                }
+            }
         }
 
         .explore-btn {
@@ -52,16 +95,8 @@
             display: flex;
             align-items: center;
             justify-content: center;
-            margin-top: 4.5rem;
+            margin-top: 3.5rem;
             cursor: pointer;
-
-            // &::before {
-
-            //     background-color: $color-white;
-            //     height: 150px;
-            //     width: 150px;
-            //     opacity: .1;
-            // }
 
             &:hover {
                 -webkit-box-shadow: 0 0 0 50px hsla(0, 0%, 86%, 0.1);
@@ -69,6 +104,10 @@
                 -webkit-transition: 0.6s cubic-bezier(0.5, 1, 0.89, 1);
                 -o-transition: 0.6s cubic-bezier(0.5, 1, 0.89, 1);
                 transition: 0.6s cubic-bezier(0.5, 1, 0.89, 1);
+            }
+
+            @include media('>tabletBig') {
+                margin: 0;
             }
         }
     }

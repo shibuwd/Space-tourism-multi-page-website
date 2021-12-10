@@ -290,7 +290,7 @@ li {
 }
 @media (min-width: 576px) {
   .hero-container .space .space-desc p {
-    font-size: "Barlow";
+    font-size: 1.125rem;
     margin-bottom: 5rem;
     width: 445px;
   }
@@ -311,6 +311,7 @@ li {
   justify-content: center;
   margin-top: 3.5rem;
   cursor: pointer;
+  z-index: 10;
 }
 .hero-container .space .explore-btn:hover {
   -webkit-box-shadow: 0 0 0 50px rgba(219, 219, 219, 0.1);

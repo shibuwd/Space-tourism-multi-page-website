@@ -74,7 +74,7 @@
 
 
                 @include media('>largePhone') {
-                    font-size: $font-base-family-1;
+                    font-size: $font-size-v10;
                     margin-bottom: 5rem;
                     width: 445px;
                 }
@@ -97,6 +97,7 @@
             justify-content: center;
             margin-top: 3.5rem;
             cursor: pointer;
+            z-index: 10;
 
             &:hover {
                 -webkit-box-shadow: 0 0 0 50px hsla(0, 0%, 86%, 0.1);

@@ -236,7 +236,6 @@ li {
   background-size: cover;
   background-repeat: no-repeat;
   width: 100vw;
-  height: auto;
 }
 .hero-container .space {
   position: absolute;
@@ -343,14 +342,16 @@ li {
   background-size: cover;
   background-repeat: no-repeat;
   width: 100vw;
-  height: auto;
 }
 .moon-container .destination__container {
   position: absolute;
-  width: 327px;
   height: 704px;
   left: 24px;
   top: 88px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
 }
 .moon-container .destination__container .destination__top h4 {
   font-size: 1.125rem;
@@ -359,6 +360,7 @@ li {
   letter-spacing: 2.7px;
   font-weight: 400;
   line-height: 20px;
+  margin-top: 1.5rem;
 }
 .moon-container .destination__container .destination__top h4 span {
   font-weight: 700;
@@ -387,6 +389,39 @@ li {
   text-transform: uppercase;
   color: white;
   padding: 0 1rem;
+  letter-spacing: 2.7px;
+}
+.moon-container .destination__container .destination__bottom .text__info h1 {
+  font-family: "Bellefair";
+  font-size: 3.5rem;
+  text-transform: uppercase;
+}
+.moon-container .destination__container .destination__bottom .text__info p {
+  font-family: "Barlow";
+  line-height: 25px;
+  font-size: 0.938rem;
+  text-align: center;
+  margin-bottom: 1rem;
+}
+.moon-container .destination__container .destination__bottom .text__info .line {
+  border: 1px solid white;
+  opacity: 0.25;
+}
+.moon-container .destination__container .destination__bottom .text__info h2,
+.moon-container .destination__container .destination__bottom .text__info h3 {
+  font-family: "Bellefair";
+  font-size: 1.75rem;
+  text-transform: uppercase;
+  display: flex;
+  flex-direction: column;
+  margin-top: 1rem;
+}
+.moon-container .destination__container .destination__bottom .text__info h2 span,
+.moon-container .destination__container .destination__bottom .text__info h3 span {
+  font-family: "Barlow Condensed";
+  font-size: 0.875rem;
+  font-weight: 400;
+  line-height: 1rem;
   letter-spacing: 2.7px;
 }
 

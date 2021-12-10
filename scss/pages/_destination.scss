@@ -7,10 +7,14 @@
 
     .destination__container {
         position: absolute;
-        width: 327px;
+        // width: 327px;
         height: 704px;
         left: 24px;
         top: 88px;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
 
         .destination__top {
             h4 {
@@ -20,6 +24,7 @@
                 letter-spacing: $letter-spacing-1;
                 font-weight: $font-weight-400;
                 line-height: 20px;
+                margin-top: 1.5rem;
 
                 span {
                     font-weight: $font-weight-700;
@@ -55,10 +60,50 @@
                         color: $color-white;
                         padding: 0 1rem;
                         letter-spacing: $letter-spacing-1;
-
                     }
                 }
             }
+
+            .text__info {
+                h1 {
+                    font-family: $font-base-family-3;
+                    font-size: $font-size-v4;
+                    text-transform: $text-transfrom-upper;
+                }
+
+                p {
+                    font-family: $font-base-family-1;
+                    line-height: 25px;
+                    font-size: $font-size-v12;
+                    text-align: center;
+                    margin-bottom: 1rem;
+                }
+
+                .line {
+                    border: 1px solid $color-white;
+                    opacity: .25;
+                }
+
+                h2,
+                h3 {
+                    font-family: $font-base-family-3;
+                    font-size: $font-size-v7;
+                    text-transform: $text-transfrom-upper;
+                    display: flex;
+                    flex-direction: column;
+                    margin-top: 1rem;
+
+                    span {
+                        font-family: $font-base-family-2;
+                        font-size: $font-size-v13;
+                        font-weight: $font-weight-400;
+                        line-height: 1rem;
+                        letter-spacing: $letter-spacing-1;
+                    }
+                }
+            }
+
+
         }
 
     }

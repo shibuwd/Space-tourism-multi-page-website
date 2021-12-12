@@ -1,8 +1,5 @@
 .hero-container {
     @include heroStyle;
-     // display: flex;
-    // align-items: center;
-    // justify-content: center;
 
     @include media('>largePhone') {
         display: flex;
@@ -12,6 +9,7 @@
 
     .hero-img picture {
         @include heroImage;
+        
     }
 
     .space {

@@ -16,6 +16,14 @@
         padding: 0 1.6rem;
 
         .destination__top {
+
+            @include media('>largePhone') {
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+                justify-content: center;
+            }
+
             h4 {
                 font-size: $font-size-v10;
                 text-transform: $text-transfrom-upper;
@@ -24,6 +32,14 @@
                 font-weight: $font-weight-400;
                 line-height: 20px;
                 margin-top: 1.5rem;
+
+                // @include media('>largePhone') {
+                //     font-size: $font-size-v9;
+                //     position: absolute;
+                //     height: 24px;
+                //     left: 20px;
+                //     top: 6px;     
+                // }
 
                 span {
                     font-weight: $font-weight-700;
@@ -39,7 +55,13 @@
                 width: 170px;
                 height: 170px;
                 display: inline-block;
-                margin-top: 30px;
+                margin-top: 2rem;
+
+                // @include media('>largePhone') {
+                //     width: 300px;
+                //     height: 300px;
+
+                // }
             }
         }
 

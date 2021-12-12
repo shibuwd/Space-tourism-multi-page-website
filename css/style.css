@@ -23,7 +23,6 @@ picture {
 
 body {
   font-family: "Barlow";
-  height: 100vh;
   line-height: 1.5;
   overflow-x: hidden;
   scroll-behavior: smooth;
@@ -67,6 +66,17 @@ li {
   height: 48px;
   width: 48px;
   margin-left: 1.2rem;
+}
+@media (min-width: 1151px) {
+  #header .header .nav-bar .nav-line {
+    position: absolute;
+    width: 48%;
+    border: 1px solid white;
+    opacity: 0.25;
+    margin-left: 17rem;
+    top: 38px;
+    z-index: 1;
+  }
 }
 @media (min-width: 576px) {
   #header .header .nav-bar {
@@ -131,7 +141,8 @@ li {
   color: white;
   text-transform: uppercase;
   line-height: 55px;
-  padding-left: 25px;
+  padding-left: 15px;
+  padding-right: 10px;
   display: block;
   font-family: "Barlow Condensed";
   font-weight: 400;
@@ -141,9 +152,10 @@ li {
 #header .header .nav-bar .nav-list ul li a:before, #header .header .nav-bar .nav-list ul li a:after {
   content: "";
   position: absolute;
-  top: 100%;
+  top: 115%;
   width: 15%;
   height: 3px;
+  background: none;
   transition: 0.8s cubic-bezier(0.5, 1, 0.89, 1);
 }
 #header .header .nav-bar .nav-list ul li a:after {
@@ -236,6 +248,7 @@ li {
   background-size: cover;
   background-repeat: no-repeat;
   width: 100vw;
+  height: auto;
 }
 .hero-container .space {
   position: absolute;
@@ -342,6 +355,7 @@ li {
   background-size: cover;
   background-repeat: no-repeat;
   width: 100vw;
+  height: auto;
 }
 .moon-container .destination__container {
   position: absolute;
@@ -352,6 +366,14 @@ li {
   align-items: center;
   justify-content: center;
   padding: 0 1.6rem;
+}
+@media (min-width: 576px) {
+  .moon-container .destination__container .destination__top {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+  }
 }
 .moon-container .destination__container .destination__top h4 {
   font-size: 1.125rem;
@@ -374,7 +396,7 @@ li {
   width: 170px;
   height: 170px;
   display: inline-block;
-  margin-top: 30px;
+  margin-top: 2rem;
 }
 .moon-container .destination__container .destination__bottom .page__links {
   display: flex;

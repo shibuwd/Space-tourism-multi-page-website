@@ -346,12 +346,12 @@ li {
 .moon-container .destination__container {
   position: absolute;
   height: 704px;
-  left: 24px;
   top: 88px;
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
+  padding: 0 1.6rem;
 }
 .moon-container .destination__container .destination__top h4 {
   font-size: 1.125rem;
@@ -367,7 +367,7 @@ li {
   opacity: 25%;
 }
 .moon-container .destination__container .destination__top .moon {
-  background-image: url(../../assets/destination/image-moon.png);
+  background-image: url(../../assets/destination/image-moon.webp);
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
@@ -401,7 +401,7 @@ li {
   line-height: 25px;
   font-size: 0.938rem;
   text-align: center;
-  margin-bottom: 1rem;
+  margin-bottom: 1.5rem;
 }
 .moon-container .destination__container .destination__bottom .text__info .line {
   border: 1px solid white;
@@ -421,7 +421,7 @@ li {
   font-family: "Barlow Condensed";
   font-size: 0.875rem;
   font-weight: 400;
-  line-height: 1rem;
+  line-height: 2rem;
   letter-spacing: 2.7px;
 }
 

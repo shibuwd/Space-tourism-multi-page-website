@@ -29,11 +29,11 @@
         @include media('>smallDesktop') {
             .nav-line {
                 position: absolute;
-                width: 34%;
+                width: 37%;
                 border: 1px solid $color-white;
                 opacity: .25;
                 margin-left: 17rem;
-                top: 68px;
+                top: 69px;
                 z-index: 1;
             }
         }
@@ -88,9 +88,17 @@
 
                 li {
 
-                    @include media('>smallDesktop') {
+                    @include media('>largePhone') {
+                        padding: 1rem .8rem;
+                    }
+
+                    @include media('>=tablet') {
                         padding: 1rem 2rem;
                     }
+
+                    // @include media('>smallDesktop') {
+                    //     padding: 1rem 2rem;
+                    // }
 
 
                     @include media('>largePhone') {
@@ -107,12 +115,15 @@
                         text-transform: uppercase;
                         line-height: 55px;
                         padding-left: 15px;
-                        // padding-right: 10px;
                         display: block;
                         font-family: $font-base-family-2;
                         font-weight: $font-weight-400;
                         font-size: $font-size-v11;
                         letter-spacing: $letter-spacing-1;
+
+                        @include media('>largePhone') {
+                             padding-left: 0;
+                        }
 
                         &:before,
                         &:after {
@@ -140,7 +151,6 @@
                             width: 50%;
                             background: $color-white;
                         }
-
 
                         span {
                             font-weight: $font-weight-700;

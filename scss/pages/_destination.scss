@@ -26,7 +26,9 @@
 
         .destination__top {
 
-            margin-right: 8rem;
+            @include media('>smallDesktop') {
+                margin-right: 8rem;
+            }
 
             @include media('>largePhone') {
                 display: flex;

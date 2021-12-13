@@ -16,3 +16,34 @@
     width: 100vw;
     height: auto;
 }
+
+
+@mixin navbarHover {
+
+    &:before,
+    &:after {
+        content: '';
+        position: absolute;
+        top: 115%;
+        width: 15%;
+        height: 3px;
+        background: none;
+        transition: .8s cubic-bezier(0.5, 1, 0.89, 1);
+    }
+
+    // &:before {
+    //     left: 50%;
+    // }
+
+    &:after {
+        right: 0%;
+    }
+
+    &:hover:before,
+    &:focus:before,
+    &:hover:after,
+    &:focus:after {
+        width: 50%;
+        background: $color-white;
+    }
+}

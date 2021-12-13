@@ -9,11 +9,12 @@
 
     .hero-img picture {
         @include heroImage;
-        
+
     }
 
     .space {
         position: absolute;
+        // margin: 0 auto;
 
         @include media('>tabletBig') {
             display: flex;
@@ -26,12 +27,13 @@
         }
 
         @include media('>smallDesktop') {
-            padding: 0 12rem;
+            padding: 0 10rem;
+            margin-top: 5rem;
         }
 
         .space-desc {
             @include media('>largePhone') {
-                margin-top: 8rem;
+                // margin-top: 5rem;
             }
 
             span {
@@ -90,16 +92,22 @@
 
             &:hover,
             &:focus {
-                -webkit-box-shadow: 0 0 0 50px hsla(0, 0%, 86%, 0.1);
                 box-shadow: 0 0 0 50px hsla(0, 0%, 86%, 0.1);
-                -webkit-transition: 0.6s cubic-bezier(0.5, 1, 0.89, 1);
-                -o-transition: 0.6s cubic-bezier(0.5, 1, 0.89, 1);
-                transition: 0.6s cubic-bezier(0.5, 1, 0.89, 1);
+                transition: 0.6s cubic-bezier(0.45, 0, 0.55, 1);
             }
 
-            @include media('>tabletBig') {
+            @include media('>=tablet') {
                 margin: 0;
+                 height: 250px;
+                 width: 250px;
+                 margin: 0 auto;
             }
+
+            @include media('>smallDesktop') {
+                margin: 0;
+                height: 275px;
+                width: 275px;
+            }            
         }
     }
 }

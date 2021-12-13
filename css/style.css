@@ -1,4 +1,5 @@
 @import url("https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@400;700&family=Barlow:wght@400;700&family=Bellefair&display=swap");
+
 *,
 *::after,
 *::before {
@@ -48,6 +49,7 @@ li {
   height: auto;
   background-color: transparent;
 }
+
 #header .header .nav-bar {
   margin-top: 0.6rem;
   display: flex;
@@ -56,22 +58,26 @@ li {
   width: 100%;
   height: 100%;
 }
+
 @media (min-width: 576px) {
   #header .header .nav-bar {
     margin-top: 0;
   }
 }
+
 @media (min-width: 1151px) {
   #header .header .nav-bar {
     margin-top: 2rem;
   }
 }
+
 #header .header .nav-bar .brand {
   z-index: 9;
   height: 48px;
   width: 48px;
   margin-left: 1.2rem;
 }
+
 @media (min-width: 1151px) {
   #header .header .nav-bar .nav-line {
     position: absolute;
@@ -83,6 +89,7 @@ li {
     z-index: 1;
   }
 }
+
 @media (min-width: 576px) {
   #header .header .nav-bar {
     height: 75px;
@@ -91,6 +98,7 @@ li {
     justify-content: space-between;
   }
 }
+
 @media (min-width: 576px) {
   #header .header .nav-bar .nav-list {
     display: flex;
@@ -98,6 +106,7 @@ li {
     justify-content: center;
   }
 }
+
 #header .header .nav-bar .nav-list ul {
   position: absolute;
   background: rgba(56, 54, 54, 0.698);
@@ -117,6 +126,7 @@ li {
   transition: 0.6s cubic-bezier(0, 0.55, 0.45, 1) left;
   z-index: 3;
 }
+
 @media (min-width: 576px) {
   #header .header .nav-bar .nav-list ul {
     position: initial;
@@ -129,19 +139,23 @@ li {
     padding-right: 0rem;
   }
 }
+
 #header .header .nav-bar .nav-list ul.active {
   left: 25%;
 }
+
 @media (min-width: 576px) {
   #header .header .nav-bar .nav-list ul li {
     padding: 1rem 0.8rem;
   }
 }
+
 @media (min-width: 768px) {
   #header .header .nav-bar .nav-list ul li {
     padding: 1rem 2rem;
   }
 }
+
 @media (min-width: 576px) {
   #header .header .nav-bar .nav-list ul li {
     display: flex;
@@ -151,24 +165,28 @@ li {
     height: 76px;
   }
 }
+
 #header .header .nav-bar .nav-list ul li a {
   position: relative;
   color: white;
   text-transform: uppercase;
   line-height: 55px;
-  padding-left: 15px;
   display: block;
   font-family: "Barlow Condensed";
   font-weight: 400;
   font-size: 1rem;
   letter-spacing: 2.7px;
+  padding-left: 0.938rem;
 }
+
 @media (min-width: 576px) {
   #header .header .nav-bar .nav-list ul li a {
     padding-left: 0;
   }
 }
-#header .header .nav-bar .nav-list ul li a:before, #header .header .nav-bar .nav-list ul li a:after {
+
+#header .header .nav-bar .nav-list ul li a:before,
+#header .header .nav-bar .nav-list ul li a:after {
   content: "";
   position: absolute;
   top: 115%;
@@ -177,21 +195,29 @@ li {
   background: none;
   transition: 0.8s cubic-bezier(0.5, 1, 0.89, 1);
 }
+
 #header .header .nav-bar .nav-list ul li a:after {
   right: 0%;
 }
-#header .header .nav-bar .nav-list ul li a:hover:before, #header .header .nav-bar .nav-list ul li a:focus:before, #header .header .nav-bar .nav-list ul li a:hover:after, #header .header .nav-bar .nav-list ul li a:focus:after {
+
+#header .header .nav-bar .nav-list ul li a:hover:before,
+#header .header .nav-bar .nav-list ul li a:focus:before,
+#header .header .nav-bar .nav-list ul li a:hover:after,
+#header .header .nav-bar .nav-list ul li a:focus:after {
   width: 50%;
   background: white;
 }
+
 #header .header .nav-bar .nav-list ul li a span {
   font-weight: 700;
 }
+
 @media (min-width: 576px) {
   #header .header .nav-bar .nav-list ul li a span {
     margin-right: 0.2rem;
   }
 }
+
 #header .header .nav-bar .nav-list .hamburger {
   height: 60px;
   width: 60px;
@@ -203,11 +229,13 @@ li {
   z-index: 10;
   cursor: pointer;
 }
+
 @media (min-width: 576px) {
   #header .header .nav-bar .nav-list .hamburger {
     display: none;
   }
 }
+
 #header .header .nav-bar .nav-list .hamburger:after {
   position: absolute;
   content: "";
@@ -215,6 +243,7 @@ li {
   width: 100%;
   animation: hamburger_puls 3s ease infinite;
 }
+
 #header .header .nav-bar .nav-list .hamburger .bar {
   height: 3px;
   width: 30px;
@@ -222,7 +251,9 @@ li {
   background-color: white;
   z-index: -1;
 }
-#header .header .nav-bar .nav-list .hamburger .bar::after, #header .header .nav-bar .nav-list .hamburger .bar::before {
+
+#header .header .nav-bar .nav-list .hamburger .bar::after,
+#header .header .nav-bar .nav-list .hamburger .bar::before {
   content: "";
   position: absolute;
   height: 100%;
@@ -232,15 +263,19 @@ li {
   transition: 0.3s ease;
   transition-property: top, bottom;
 }
+
 #header .header .nav-bar .nav-list .hamburger .bar::after {
   top: 8px;
 }
+
 #header .header .nav-bar .nav-list .hamburger .bar::before {
   bottom: 8px;
 }
+
 #header .header .nav-bar .nav-list .hamburger.active .bar::before {
   bottom: 0;
 }
+
 #header .header .nav-bar .nav-list .hamburger.active .bar::after {
   top: 0;
 }
@@ -254,6 +289,7 @@ li {
   align-items: center;
   justify-content: center;
 }
+
 @media (min-width: 576px) {
   .hero-container {
     display: flex;
@@ -261,6 +297,7 @@ li {
     justify-content: center;
   }
 }
+
 .hero-container .hero-img picture {
   position: relative;
   background-position: center;
@@ -269,9 +306,11 @@ li {
   width: 100vw;
   height: auto;
 }
+
 .hero-container .space {
   position: absolute;
 }
+
 @media (min-width: 921px) {
   .hero-container .space {
     display: flex;
@@ -283,44 +322,47 @@ li {
     text-align: left;
   }
 }
+
 @media (min-width: 1151px) {
   .hero-container .space {
-    padding: 0 12rem;
+    padding: 0 10rem;
+    margin-top: 5rem;
   }
 }
-@media (min-width: 576px) {
-  .hero-container .space .space-desc {
-    margin-top: 8rem;
-  }
-}
+
 .hero-container .space .space-desc span {
   font-family: "Barlow Condensed";
   font-size: 1rem;
   letter-spacing: 2.7px;
   text-transform: uppercase;
 }
+
 @media (min-width: 576px) {
   .hero-container .space .space-desc span {
     font-size: 1.25rem;
   }
 }
+
 .hero-container .space .space-desc h1 {
   font-family: "Bellefair";
   text-transform: uppercase;
   font-size: 5rem;
   line-height: 90px;
 }
+
 @media (min-width: 576px) {
   .hero-container .space .space-desc h1 {
     font-size: 9.375rem;
     line-height: 180px;
   }
 }
+
 .hero-container .space .space-desc p {
   font-size: 0.938rem;
   line-height: 25px;
   padding: 0 1.3rem;
 }
+
 @media (min-width: 576px) {
   .hero-container .space .space-desc p {
     font-size: 1.125rem;
@@ -328,6 +370,7 @@ li {
     width: 445px;
   }
 }
+
 .hero-container .space .explore-btn {
   text-align: center;
   font-family: "Bellefair";
@@ -346,16 +389,27 @@ li {
   cursor: pointer;
   z-index: 10;
 }
-.hero-container .space .explore-btn:hover, .hero-container .space .explore-btn:focus {
-  -webkit-box-shadow: 0 0 0 50px rgba(219, 219, 219, 0.1);
+
+.hero-container .space .explore-btn:hover,
+.hero-container .space .explore-btn:focus {
   box-shadow: 0 0 0 50px rgba(219, 219, 219, 0.1);
-  -webkit-transition: 0.6s cubic-bezier(0.5, 1, 0.89, 1);
-  -o-transition: 0.6s cubic-bezier(0.5, 1, 0.89, 1);
-  transition: 0.6s cubic-bezier(0.5, 1, 0.89, 1);
+  transition: 0.6s cubic-bezier(0.45, 0, 0.55, 1);
 }
-@media (min-width: 921px) {
+
+@media (min-width: 768px) {
   .hero-container .space .explore-btn {
     margin: 0;
+    height: 250px;
+    width: 250px;
+    margin: 0 auto;
+  }
+}
+
+@media (min-width: 1151px) {
+  .hero-container .space .explore-btn {
+    margin: 0;
+    height: 275px;
+    width: 275px;
   }
 }
 
@@ -368,6 +422,7 @@ li {
   align-items: center;
   justify-content: center;
 }
+
 .moon-container .moon-img {
   position: relative;
   background-position: center;
@@ -376,6 +431,7 @@ li {
   width: 100vw;
   height: auto;
 }
+
 .moon-container .destination__container {
   position: absolute;
   top: 88px;
@@ -385,6 +441,7 @@ li {
   justify-content: center;
   padding: 0 1.6rem;
 }
+
 @media (min-width: 1151px) {
   .moon-container .destination__container {
     display: flex;
@@ -395,11 +452,13 @@ li {
     margin-top: 8rem;
   }
 }
+
 @media (min-width: 1151px) {
   .moon-container .destination__container .destination__top {
     margin-right: 8rem;
   }
 }
+
 @media (min-width: 576px) {
   .moon-container .destination__container .destination__top {
     display: flex;
@@ -408,6 +467,7 @@ li {
     justify-content: center;
   }
 }
+
 .moon-container .destination__container .destination__top h4 {
   font-size: 1.125rem;
   text-transform: uppercase;
@@ -417,22 +477,26 @@ li {
   line-height: 20px;
   margin-top: 2rem;
 }
+
 @media (min-width: 576px) {
   .moon-container .destination__container .destination__top h4 {
     font-size: 1.25rem;
     margin-bottom: 1rem;
   }
 }
+
 @media (min-width: 1151px) {
   .moon-container .destination__container .destination__top h4 {
     font-size: 1.75rem;
     letter-spacing: 4.7px;
   }
 }
+
 .moon-container .destination__container .destination__top h4 span {
   font-weight: 700;
   opacity: 25%;
 }
+
 .moon-container .destination__container .destination__top .moon {
   background-image: url(../../assets/destination/image-moon.webp);
   background-position: center;
@@ -443,18 +507,21 @@ li {
   display: inline-block;
   margin-top: 2.5rem;
 }
+
 @media (min-width: 576px) {
   .moon-container .destination__container .destination__top .moon {
     width: 300px;
     height: 300px;
   }
 }
+
 @media (min-width: 1151px) {
   .moon-container .destination__container .destination__top .moon {
     width: 445px;
     height: 445px;
   }
 }
+
 .moon-container .destination__container .destination__bottom .page__links {
   display: flex;
   align-items: center;
@@ -462,34 +529,65 @@ li {
   flex-direction: row;
   margin: 2rem 0;
 }
+
 .moon-container .destination__container .destination__bottom .page__links li a {
   font-family: "Barlow Condensed";
   font-size: 0.875rem;
   text-transform: uppercase;
   color: white;
-  padding: 0 1.5rem;
+  margin-right: 2.2rem;
   letter-spacing: 2.7px;
+  position: relative;
+  display: block;
 }
+
+.moon-container .destination__container .destination__bottom .page__links li a:before,
+.moon-container .destination__container .destination__bottom .page__links li a:after {
+  content: "";
+  position: absolute;
+  top: 115%;
+  width: 15%;
+  height: 3px;
+  background: none;
+  transition: 0.8s cubic-bezier(0.5, 1, 0.89, 1);
+}
+
+.moon-container .destination__container .destination__bottom .page__links li a:after {
+  right: 0%;
+}
+
+.moon-container .destination__container .destination__bottom .page__links li a:hover:before,
+.moon-container .destination__container .destination__bottom .page__links li a:focus:before,
+.moon-container .destination__container .destination__bottom .page__links li a:hover:after,
+.moon-container .destination__container .destination__bottom .page__links li a:focus:after {
+  width: 50%;
+  background: white;
+}
+
 @media (min-width: 576px) {
   .moon-container .destination__container .destination__bottom .page__links li a {
     font-size: 1rem;
   }
 }
+
 .moon-container .destination__container .destination__bottom .text__info h1 {
   font-family: "Bellefair";
   font-size: 3.5rem;
   text-transform: uppercase;
 }
+
 @media (min-width: 576px) {
   .moon-container .destination__container .destination__bottom .text__info h1 {
     font-size: 5rem;
   }
 }
+
 @media (min-width: 576px) {
   .moon-container .destination__container .destination__bottom .text__info h1 {
     font-size: 6.25rem;
   }
 }
+
 .moon-container .destination__container .destination__bottom .text__info p {
   font-family: "Barlow";
   line-height: 25px;
@@ -497,6 +595,7 @@ li {
   text-align: center;
   margin-bottom: 2rem;
 }
+
 @media (min-width: 576px) {
   .moon-container .destination__container .destination__bottom .text__info p {
     font-size: 1rem;
@@ -504,21 +603,25 @@ li {
     width: 570px;
   }
 }
+
 @media (min-width: 1151px) {
   .moon-container .destination__container .destination__bottom .text__info p {
     text-align: left;
     width: 444px;
   }
 }
+
 @media (min-width: 576px) {
   .moon-container .destination__container .destination__bottom .text__info p {
     font-size: 1.125rem;
   }
 }
+
 .moon-container .destination__container .destination__bottom .text__info .line {
   border: 1px solid white;
   opacity: 0.25;
 }
+
 .moon-container .destination__container .destination__bottom .text__info .travel-info h2,
 .moon-container .destination__container .destination__bottom .text__info .travel-info h3 {
   font-family: "Bellefair";
@@ -528,6 +631,7 @@ li {
   flex-direction: column;
   margin-top: 1rem;
 }
+
 .moon-container .destination__container .destination__bottom .text__info .travel-info h2 span,
 .moon-container .destination__container .destination__bottom .text__info .travel-info h3 span {
   font-family: "Barlow Condensed";
@@ -536,12 +640,15 @@ li {
   line-height: 2rem;
   letter-spacing: 2.7px;
 }
+
 @media (min-width: 1151px) {
+
   .moon-container .destination__container .destination__bottom .text__info .travel-info h2,
-.moon-container .destination__container .destination__bottom .text__info .travel-info h3 {
+  .moon-container .destination__container .destination__bottom .text__info .travel-info h3 {
     font-size: 1.75rem;
   }
 }
+
 @media (min-width: 576px) {
   .moon-container .destination__container .destination__bottom .text__info .travel-info {
     display: flex;
@@ -551,11 +658,13 @@ li {
     margin-top: 3rem;
   }
 }
+
 @media (min-width: 1151px) {
   .moon-container .destination__container .destination__bottom .text__info .travel-info {
     justify-content: space-between;
   }
 }
+
 @media (min-width: 1151px) {
   .moon-container .destination__container .destination__bottom .text__info {
     margin-left: 7rem;

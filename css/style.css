@@ -362,7 +362,7 @@ li {
   }
 }
 
-.moon-container {
+.container {
   position: absolute;
   color: white;
   text-align: center;
@@ -371,7 +371,7 @@ li {
   align-items: center;
   justify-content: center;
 }
-.moon-container .moon-img {
+.container .container__img {
   position: relative;
   background-position: center;
   background-size: cover;
@@ -379,7 +379,7 @@ li {
   width: 100vw;
   height: auto;
 }
-.moon-container .destination__container {
+.container .destination__container {
   position: absolute;
   top: 88px;
   display: flex;
@@ -389,7 +389,7 @@ li {
   padding: 0 1.6rem;
 }
 @media (min-width: 1151px) {
-  .moon-container .destination__container {
+  .container .destination__container {
     display: flex;
     flex-direction: row;
     align-items: center;
@@ -399,19 +399,19 @@ li {
   }
 }
 @media (min-width: 1151px) {
-  .moon-container .destination__container .destination__top {
+  .container .destination__container .destination__top {
     margin-right: 8rem;
   }
 }
 @media (min-width: 576px) {
-  .moon-container .destination__container .destination__top {
+  .container .destination__container .destination__top {
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: center;
   }
 }
-.moon-container .destination__container .destination__top h4 {
+.container .destination__container .destination__top h4 {
   font-size: 1.125rem;
   text-transform: uppercase;
   font-family: "Barlow Condensed";
@@ -421,22 +421,22 @@ li {
   margin-top: 2rem;
 }
 @media (min-width: 576px) {
-  .moon-container .destination__container .destination__top h4 {
+  .container .destination__container .destination__top h4 {
     font-size: 1.25rem;
     margin-bottom: 1rem;
   }
 }
 @media (min-width: 1151px) {
-  .moon-container .destination__container .destination__top h4 {
+  .container .destination__container .destination__top h4 {
     font-size: 1.75rem;
     letter-spacing: 4.7px;
   }
 }
-.moon-container .destination__container .destination__top h4 span {
+.container .destination__container .destination__top h4 span {
   font-weight: 700;
   opacity: 25%;
 }
-.moon-container .destination__container .destination__top .moon {
+.container .destination__container .destination__top .destination__place {
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
@@ -446,25 +446,25 @@ li {
   margin-top: 2.5rem;
 }
 @media (min-width: 576px) {
-  .moon-container .destination__container .destination__top .moon {
+  .container .destination__container .destination__top .destination__place {
     width: 300px;
     height: 300px;
   }
 }
 @media (min-width: 1151px) {
-  .moon-container .destination__container .destination__top .moon {
+  .container .destination__container .destination__top .destination__place {
     width: 445px;
     height: 445px;
   }
 }
-.moon-container .destination__container .destination__bottom .page__links {
+.container .destination__container .destination__bottom .page__links {
   display: flex;
   align-items: center;
   justify-content: center;
   flex-direction: row;
   margin: 2rem 0;
 }
-.moon-container .destination__container .destination__bottom .page__links li a {
+.container .destination__container .destination__bottom .page__links li a {
   font-family: "Barlow Condensed";
   font-size: 0.875rem;
   text-transform: uppercase;
@@ -474,7 +474,7 @@ li {
   position: relative;
   display: block;
 }
-.moon-container .destination__container .destination__bottom .page__links li a:before, .moon-container .destination__container .destination__bottom .page__links li a:after {
+.container .destination__container .destination__bottom .page__links li a:before, .container .destination__container .destination__bottom .page__links li a:after {
   content: "";
   position: absolute;
   top: 115%;
@@ -483,34 +483,34 @@ li {
   background: none;
   transition: 0.8s cubic-bezier(0.5, 1, 0.89, 1);
 }
-.moon-container .destination__container .destination__bottom .page__links li a:after {
+.container .destination__container .destination__bottom .page__links li a:after {
   right: 0%;
 }
-.moon-container .destination__container .destination__bottom .page__links li a:hover:before, .moon-container .destination__container .destination__bottom .page__links li a:focus:before, .moon-container .destination__container .destination__bottom .page__links li a:hover:after, .moon-container .destination__container .destination__bottom .page__links li a:focus:after {
+.container .destination__container .destination__bottom .page__links li a:hover:before, .container .destination__container .destination__bottom .page__links li a:focus:before, .container .destination__container .destination__bottom .page__links li a:hover:after, .container .destination__container .destination__bottom .page__links li a:focus:after {
   width: 50%;
   background: white;
 }
 @media (min-width: 576px) {
-  .moon-container .destination__container .destination__bottom .page__links li a {
+  .container .destination__container .destination__bottom .page__links li a {
     font-size: 1rem;
   }
 }
-.moon-container .destination__container .destination__bottom .text__info h1 {
+.container .destination__container .destination__bottom .text__info h1 {
   font-family: "Bellefair";
   font-size: 3.5rem;
   text-transform: uppercase;
 }
 @media (min-width: 576px) {
-  .moon-container .destination__container .destination__bottom .text__info h1 {
+  .container .destination__container .destination__bottom .text__info h1 {
     font-size: 5rem;
   }
 }
 @media (min-width: 576px) {
-  .moon-container .destination__container .destination__bottom .text__info h1 {
+  .container .destination__container .destination__bottom .text__info h1 {
     font-size: 6.25rem;
   }
 }
-.moon-container .destination__container .destination__bottom .text__info p {
+.container .destination__container .destination__bottom .text__info p {
   font-family: "Barlow";
   line-height: 25px;
   font-size: 0.938rem;
@@ -518,29 +518,29 @@ li {
   margin-bottom: 2rem;
 }
 @media (min-width: 576px) {
-  .moon-container .destination__container .destination__bottom .text__info p {
+  .container .destination__container .destination__bottom .text__info p {
     font-size: 1rem;
     line-height: 28px;
     width: 570px;
   }
 }
 @media (min-width: 1151px) {
-  .moon-container .destination__container .destination__bottom .text__info p {
+  .container .destination__container .destination__bottom .text__info p {
     text-align: left;
     width: 444px;
   }
 }
 @media (min-width: 576px) {
-  .moon-container .destination__container .destination__bottom .text__info p {
+  .container .destination__container .destination__bottom .text__info p {
     font-size: 1.125rem;
   }
 }
-.moon-container .destination__container .destination__bottom .text__info .line {
+.container .destination__container .destination__bottom .text__info .line {
   border: 1px solid white;
   opacity: 0.25;
 }
-.moon-container .destination__container .destination__bottom .text__info .travel-info h2,
-.moon-container .destination__container .destination__bottom .text__info .travel-info h3 {
+.container .destination__container .destination__bottom .text__info .travel-info h2,
+.container .destination__container .destination__bottom .text__info .travel-info h3 {
   font-family: "Bellefair";
   font-size: 1.75rem;
   text-transform: uppercase;
@@ -548,8 +548,8 @@ li {
   flex-direction: column;
   margin-top: 1rem;
 }
-.moon-container .destination__container .destination__bottom .text__info .travel-info h2 span,
-.moon-container .destination__container .destination__bottom .text__info .travel-info h3 span {
+.container .destination__container .destination__bottom .text__info .travel-info h2 span,
+.container .destination__container .destination__bottom .text__info .travel-info h3 span {
   font-family: "Barlow Condensed";
   font-size: 0.875rem;
   font-weight: 400;
@@ -557,13 +557,13 @@ li {
   letter-spacing: 2.7px;
 }
 @media (min-width: 1151px) {
-  .moon-container .destination__container .destination__bottom .text__info .travel-info h2,
-.moon-container .destination__container .destination__bottom .text__info .travel-info h3 {
+  .container .destination__container .destination__bottom .text__info .travel-info h2,
+.container .destination__container .destination__bottom .text__info .travel-info h3 {
     font-size: 1.75rem;
   }
 }
 @media (min-width: 576px) {
-  .moon-container .destination__container .destination__bottom .text__info .travel-info {
+  .container .destination__container .destination__bottom .text__info .travel-info {
     display: flex;
     align-items: center;
     justify-content: center;
@@ -572,12 +572,12 @@ li {
   }
 }
 @media (min-width: 1151px) {
-  .moon-container .destination__container .destination__bottom .text__info .travel-info {
+  .container .destination__container .destination__bottom .text__info .travel-info {
     justify-content: space-between;
   }
 }
 @media (min-width: 1151px) {
-  .moon-container .destination__container .destination__bottom .text__info {
+  .container .destination__container .destination__bottom .text__info {
     margin-left: 7rem;
   }
 }

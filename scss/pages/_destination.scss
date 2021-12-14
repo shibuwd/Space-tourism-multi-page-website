@@ -1,7 +1,7 @@
-.moon-container {
+.container {
     @include heroStyle;
 
-    .moon-img {
+    .container__img {
         @include heroImage;
     }
 
@@ -62,7 +62,7 @@
                 }
             }
 
-            .moon {
+            .destination__place {
                 // background-image: url(../../assets/destination/image-moon.webp);
                 background-position: center;
                 background-repeat: no-repeat;

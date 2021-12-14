@@ -26,7 +26,6 @@ body {
   line-height: 1.5;
   overflow-x: hidden;
   scroll-behavior: smooth;
-  text-rendering: optimizeSpeed;
 }
 
 h1,

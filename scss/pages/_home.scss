@@ -1,40 +1,33 @@
 .hero-container {
     @include heroStyle;
 
-    @include media('>largePhone') {
-        display: flex;
-        align-items: center;
-        justify-content: center;
-    }
-
     .hero-img picture {
         @include heroImage;
-
+        height: 100vh;
     }
 
     .space {
         position: absolute;
-        // margin: 0 auto;
+        margin-top: 2.5rem;
+        // height: auto;
+        width: 100vw;
 
-        @include media('>tabletBig') {
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-            width: 100%;
-            flex-direction: row;
-            padding: 0 6rem;
-            text-align: left;
+        @include media('>=tablet') {
+            margin: 0 auto;
+            margin-top: 2rem;
         }
 
-        @include media('>smallDesktop') {
-            padding: 0 10rem;
-            margin-top: 5rem;
+        @include media('>=smallDesktop') {
+            padding: 0 2rem;
+            margin-top: 6rem;
+            display: flex;
+            justify-content: space-around;
+            align-items: center;
+            flex-direction: row;
+            text-align: left
         }
 
         .space-desc {
-            @include media('>largePhone') {
-                // margin-top: 5rem;
-            }
 
             span {
                 font-family: $font-base-family-2;
@@ -52,10 +45,12 @@
                 text-transform: $text-transfrom-upper;
                 font-size: $font-size-v3;
                 line-height: 90px;
+                padding: 0;
 
-                @include media('>largePhone') {
+                @include media('>=tablet') {
                     font-size: $font-size-v1;
                     line-height: 180px;
+                    margin-top: 2rem;
                 }
             }
 
@@ -64,10 +59,11 @@
                 line-height: 25px;
                 padding: 0 1.3rem;
 
-                @include media('>largePhone') {
+                @include media('>=tablet') {
                     font-size: $font-size-v10;
-                    margin-bottom: 5rem;
+                    margin: 0 auto;
                     width: 445px;
+                    padding: 2rem 0;
                 }
             }
         }

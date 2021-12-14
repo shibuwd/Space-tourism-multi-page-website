@@ -361,7 +361,7 @@ li {
   }
 }
 
-.container {
+.destination__bg {
   position: absolute;
   color: white;
   text-align: center;
@@ -370,7 +370,7 @@ li {
   align-items: center;
   justify-content: center;
 }
-.container .container__img {
+.destination__bg .container__img {
   position: relative;
   background-position: center;
   background-size: cover;
@@ -378,39 +378,43 @@ li {
   width: 100vw;
   height: auto;
 }
-.container .destination__container {
+
+.destination {
   position: absolute;
-  top: 88px;
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
   padding: 0 1.6rem;
+  color: white;
+  width: 100vw;
+  height: auto;
+  margin: 0 auto;
 }
 @media (min-width: 1151px) {
-  .container .destination__container {
+  .destination {
     display: flex;
     flex-direction: row;
     align-items: center;
     justify-content: center;
     text-align: left;
-    margin-top: 8rem;
+    margin-top: 4rem;
   }
 }
 @media (min-width: 1151px) {
-  .container .destination__container .destination__top {
+  .destination .destination__top {
     margin-right: 8rem;
   }
 }
 @media (min-width: 576px) {
-  .container .destination__container .destination__top {
+  .destination .destination__top {
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: center;
   }
 }
-.container .destination__container .destination__top h4 {
+.destination .destination__top h4 {
   font-size: 1.125rem;
   text-transform: uppercase;
   font-family: "Barlow Condensed";
@@ -420,60 +424,65 @@ li {
   margin-top: 2rem;
 }
 @media (min-width: 576px) {
-  .container .destination__container .destination__top h4 {
+  .destination .destination__top h4 {
     font-size: 1.25rem;
     margin-bottom: 1rem;
   }
 }
 @media (min-width: 1151px) {
-  .container .destination__container .destination__top h4 {
+  .destination .destination__top h4 {
     font-size: 1.75rem;
     letter-spacing: 4.7px;
   }
 }
-.container .destination__container .destination__top h4 span {
+.destination .destination__top h4 span {
   font-weight: 700;
   opacity: 25%;
 }
-.container .destination__container .destination__top .destination__place {
+.destination .destination__top .destination__place {
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
   width: 170px;
   height: 170px;
-  display: inline-block;
+  margin: 0 auto;
   margin-top: 2.5rem;
 }
-@media (min-width: 576px) {
-  .container .destination__container .destination__top .destination__place {
+@media (min-width: 768px) {
+  .destination .destination__top .destination__place {
     width: 300px;
     height: 300px;
   }
 }
 @media (min-width: 1151px) {
-  .container .destination__container .destination__top .destination__place {
+  .destination .destination__top .destination__place {
     width: 445px;
     height: 445px;
   }
 }
-.container .destination__container .destination__bottom .page__links {
+.destination .destination__bottom .page__links {
   display: flex;
   align-items: center;
   justify-content: center;
   flex-direction: row;
-  margin: 2rem 0;
+  margin: 1.2rem 0;
 }
-.container .destination__container .destination__bottom .page__links li a {
+@media (min-width: 1151px) {
+  .destination .destination__bottom .page__links {
+    margin-right: 1.8rem;
+  }
+}
+.destination .destination__bottom .page__links li a {
   font-family: "Barlow Condensed";
   font-size: 0.875rem;
   text-transform: uppercase;
   color: white;
-  margin-right: 2.2rem;
+  margin: 0 1rem;
   letter-spacing: 2.7px;
   position: relative;
   display: block;
 }
-.container .destination__container .destination__bottom .page__links li a:before, .container .destination__container .destination__bottom .page__links li a:after {
+.destination .destination__bottom .page__links li a:before, .destination .destination__bottom .page__links li a:after {
   content: "";
   position: absolute;
   top: 115%;
@@ -482,34 +491,40 @@ li {
   background: none;
   transition: 0.8s cubic-bezier(0.5, 1, 0.89, 1);
 }
-.container .destination__container .destination__bottom .page__links li a:after {
+.destination .destination__bottom .page__links li a:after {
   right: 0%;
 }
-.container .destination__container .destination__bottom .page__links li a:hover:before, .container .destination__container .destination__bottom .page__links li a:focus:before, .container .destination__container .destination__bottom .page__links li a:hover:after, .container .destination__container .destination__bottom .page__links li a:focus:after {
+.destination .destination__bottom .page__links li a:hover:before, .destination .destination__bottom .page__links li a:focus:before, .destination .destination__bottom .page__links li a:hover:after, .destination .destination__bottom .page__links li a:focus:after {
   width: 50%;
   background: white;
 }
 @media (min-width: 576px) {
-  .container .destination__container .destination__bottom .page__links li a {
+  .destination .destination__bottom .page__links li a {
     font-size: 1rem;
   }
 }
-.container .destination__container .destination__bottom .text__info h1 {
+.destination .destination__bottom .text__info h1 {
   font-family: "Bellefair";
   font-size: 3.5rem;
   text-transform: uppercase;
+  text-align: center;
 }
 @media (min-width: 576px) {
-  .container .destination__container .destination__bottom .text__info h1 {
+  .destination .destination__bottom .text__info h1 {
     font-size: 5rem;
   }
 }
 @media (min-width: 576px) {
-  .container .destination__container .destination__bottom .text__info h1 {
+  .destination .destination__bottom .text__info h1 {
     font-size: 6.25rem;
   }
 }
-.container .destination__container .destination__bottom .text__info p {
+@media (min-width: 1150px) {
+  .destination .destination__bottom .text__info h1 {
+    text-align: left;
+  }
+}
+.destination .destination__bottom .text__info p {
   font-family: "Barlow";
   line-height: 25px;
   font-size: 0.938rem;
@@ -517,38 +532,39 @@ li {
   margin-bottom: 2rem;
 }
 @media (min-width: 576px) {
-  .container .destination__container .destination__bottom .text__info p {
+  .destination .destination__bottom .text__info p {
     font-size: 1rem;
     line-height: 28px;
     width: 570px;
   }
 }
 @media (min-width: 1151px) {
-  .container .destination__container .destination__bottom .text__info p {
+  .destination .destination__bottom .text__info p {
     text-align: left;
     width: 444px;
   }
 }
 @media (min-width: 576px) {
-  .container .destination__container .destination__bottom .text__info p {
+  .destination .destination__bottom .text__info p {
     font-size: 1.125rem;
   }
 }
-.container .destination__container .destination__bottom .text__info .line {
+.destination .destination__bottom .text__info .line {
   border: 1px solid white;
   opacity: 0.25;
 }
-.container .destination__container .destination__bottom .text__info .travel-info h2,
-.container .destination__container .destination__bottom .text__info .travel-info h3 {
+.destination .destination__bottom .text__info .travel-info h2,
+.destination .destination__bottom .text__info .travel-info h3 {
   font-family: "Bellefair";
   font-size: 1.75rem;
   text-transform: uppercase;
   display: flex;
+  text-align: center;
   flex-direction: column;
   margin-top: 1rem;
 }
-.container .destination__container .destination__bottom .text__info .travel-info h2 span,
-.container .destination__container .destination__bottom .text__info .travel-info h3 span {
+.destination .destination__bottom .text__info .travel-info h2 span,
+.destination .destination__bottom .text__info .travel-info h3 span {
   font-family: "Barlow Condensed";
   font-size: 0.875rem;
   font-weight: 400;
@@ -556,13 +572,13 @@ li {
   letter-spacing: 2.7px;
 }
 @media (min-width: 1151px) {
-  .container .destination__container .destination__bottom .text__info .travel-info h2,
-.container .destination__container .destination__bottom .text__info .travel-info h3 {
+  .destination .destination__bottom .text__info .travel-info h2,
+.destination .destination__bottom .text__info .travel-info h3 {
     font-size: 1.75rem;
   }
 }
 @media (min-width: 576px) {
-  .container .destination__container .destination__bottom .text__info .travel-info {
+  .destination .destination__bottom .text__info .travel-info {
     display: flex;
     align-items: center;
     justify-content: center;
@@ -571,12 +587,12 @@ li {
   }
 }
 @media (min-width: 1151px) {
-  .container .destination__container .destination__bottom .text__info .travel-info {
+  .destination .destination__bottom .text__info .travel-info {
     justify-content: space-between;
   }
 }
 @media (min-width: 1151px) {
-  .container .destination__container .destination__bottom .text__info {
+  .destination .destination__bottom .text__info {
     margin-left: 7rem;
   }
 }

@@ -112,7 +112,8 @@
                         position: relative;
                         color: $color-white;
                         text-transform: uppercase;
-                        line-height: 55px;
+                        // line-height: 55px;
+                        margin-bottom: 2rem;
                         display: block;
                         font-family: $font-base-family-2;
                         font-weight: $font-weight-400;
@@ -124,7 +125,10 @@
                             padding-left: 0;
                         }
 
-                        @include navbarHover;
+                        @include media('>=tablet') {
+                            margin: 0 auto
+                        }
+                        @include navbarHover; 
 
                         span {
                             font-weight: $font-weight-700;

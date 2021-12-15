@@ -1,0 +1,124 @@
+.crew__bg {
+    @include heroStyle;
+
+    .container__img {
+        @include heroImage;
+        width: 100vw;
+        min-height: auto;
+        margin: 0 auto;
+        height: 100vh;
+        min-height: 667px;
+        background-image: url(../../assets/crew/background-crew-mobile.jpg);
+
+        @include media('>=tablet') {
+            background-image: url(../../assets/crew/background-crew-tablet.jpg);
+            height: 100vh;
+        }
+
+        @include media('>=smallDesktop') {
+            background-image: url(../../assets/crew/background-crew-desktop.jpg);
+            max-height: 100vmax;
+            min-height: 768px;
+        }
+    }
+}
+
+.crew {
+    @include heroImgPostion;
+
+    @include media('>=tablet') {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+
+    .crew__top {
+        h2 {
+            font-size: $font-size-v10;
+            text-transform: $text-transfrom-upper;
+            font-family: $font-base-family-2;
+            letter-spacing: $letter-spacing-1;
+            font-weight: $font-weight-400;
+            line-height: 20px;
+            margin-top: 1rem;
+            text-align: center;
+            margin-bottom: 3rem;
+
+            @include media('>=tablet') {
+                font-size: $font-size-v8;
+                margin-bottom: 1rem;
+            }
+        }
+
+        span {
+            font-weight: $font-weight-700;
+            opacity: 25%;
+        }
+
+        .crew__img {
+            width: 177.12px;
+            height: 222px;
+            position: relative;
+
+            @include media('>=tablet') {
+                position: absolute;
+                width: 456px;
+                height: 572px;
+                left: 190px;
+                top: 310px;
+            }
+
+            .line {
+                position: absolute;
+                width: 350px;
+                left: -80px;
+                border-bottom: 1px solid $color-white;
+                opacity: .25;
+
+                @include media('>=tablet') {
+                    border: none;
+                }
+            }
+        }
+    }
+
+    .crew__bottom {
+        .text__info {
+            h1 {
+                font-family: $font-base-family-3;
+                font-size: $font-size-v8;
+                display: flex;
+                flex-direction: column;
+                text-align: center;
+                margin-top: 2rem;
+                text-transform: $text-transfrom-upper;
+
+                @include media('>=tablet') {
+                    font-size: $font-size-v5;
+                    margin-top: 1rem;
+                }
+
+                span {
+                    font-size: $font-size-v11;
+                    opacity: .5;
+                    font-family: $font-base-family-3;
+
+                    @include media('>=tablet') {
+                        font-size: $font-size-v8;
+                    }
+                }
+            }
+
+            p {
+                margin-top: 2rem;
+                font-size: $font-size-v12;
+                text-align: center;
+
+                @include media('>=tablet') {
+                    font-size: $font-size-v12;
+                    width: 460px;
+                }
+            }
+        }
+    }
+}

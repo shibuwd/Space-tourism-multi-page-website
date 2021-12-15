@@ -24,7 +24,7 @@
         position: absolute;
         top: 195%;
         width: 0%;
-        
+
         border-bottom: 3px solid white;
         background: none;
         transition: .8s cubic-bezier(0.5, 1, 0.89, 1);
@@ -45,4 +45,17 @@
         width: 50%;
         background: $color-white;
     }
+}
+
+
+@mixin heroImgPostion {
+    position: absolute;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 0 1.6rem;
+    color: $color-white;
+    margin-top: 1rem;
+    width: 100vw;
 }

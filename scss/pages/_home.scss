@@ -20,7 +20,6 @@
     .space {
         position: absolute;
         margin-top: 2.5rem;
-        // height: auto;
         width: 100vw;
 
         @include media('>=tablet') {

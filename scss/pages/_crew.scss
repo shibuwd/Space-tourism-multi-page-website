@@ -4,21 +4,16 @@
     .container__img {
         @include heroImage;
         width: 100vw;
-        min-height: auto;
-        margin: 0 auto;
-        height: 100vh;
-        min-height: 667px;
+        height: 720px;
+        min-height: 100vh;
         background-image: url(../../assets/crew/background-crew-mobile.jpg);
 
         @include media('>=tablet') {
             background-image: url(../../assets/crew/background-crew-tablet.jpg);
-            height: 100vh;
         }
 
         @include media('>=smallDesktop') {
             background-image: url(../../assets/crew/background-crew-desktop.jpg);
-            max-height: 100vmax;
-            min-height: 768px;
         }
     }
 }
@@ -26,52 +21,81 @@
 .crew {
     @include heroImgPostion;
 
-    @include media('>=tablet') {
-        display: flex;
-        align-items: center;
-        justify-content: center;
-    }
+    h2 {
+        font-size: $font-size-v10;
+        text-transform: $text-transfrom-upper;
+        font-family: $font-base-family-2;
+        letter-spacing: $letter-spacing-1;
+        font-weight: $font-weight-400;
+        line-height: 20px;
+        margin-top: 1rem;
+        text-align: center;
+        margin-bottom: 3rem;
+        position: relative;
 
-    .crew__top {
-        h2 {
-            font-size: $font-size-v10;
-            text-transform: $text-transfrom-upper;
-            font-family: $font-base-family-2;
-            letter-spacing: $letter-spacing-1;
-            font-weight: $font-weight-400;
-            line-height: 20px;
-            margin-top: 1rem;
-            text-align: center;
-            margin-bottom: 3rem;
+        @include media('>=tablet') {
+            position: absolute;
+            font-size: $font-size-v8;
+            top: -5%;
+            margin-top: 3rem;
+        }
 
-            @include media('>=tablet') {
-                font-size: $font-size-v8;
-                margin-bottom: 1rem;
-            }
+        @include media('>=smallDesktop') {
+            right: 76%;
+            top: 8%;
+            position: absolute;
+            font-size: $font-size-v7;
         }
 
         span {
             font-weight: $font-weight-700;
             opacity: 25%;
         }
+    }
 
+    @include media('>=tablet') {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        flex-direction: column-reverse;
+    }
+
+    .crew__top {
         .crew__img {
-            width: 177.12px;
+            width: 177px;
             height: 222px;
             position: relative;
+            background-position: center;
+            background-repeat: no-repeat;
+            background-size: contain;
+            overflow: hidden;
 
             @include media('>=tablet') {
-                position: absolute;
                 width: 456px;
                 height: 572px;
-                left: 190px;
-                top: 310px;
+                top: 18px;
+                overflow: hidden;
+            }
+
+            @include media('>=smallDesktop') {
+                right: -70%;
+                top: 3.3rem;
+                Width: 425px;
+                Height: 544px;
+                overflow: hidden;
+            }
+
+            @include media('>=midDesktop') {
+                width: 568.07px;
+                height: 712px;
+                top: 4rem;
             }
 
             .line {
                 position: absolute;
                 width: 350px;
-                left: -80px;
+                top: 240px;
+                left: -83px;
                 border-bottom: 1px solid $color-white;
                 opacity: .25;
 
@@ -83,6 +107,52 @@
     }
 
     .crew__bottom {
+        @include media('>=tablet') {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            flex-direction: column-reverse;
+        }
+
+        @include media('>=smallDesktop') {
+            position: absolute;
+            left: 8%;
+        }
+
+        .page__links {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            position: relative;
+
+            @include media('>=smallDesktop') {
+                position: absolute;
+                bottom: -25%;
+                left: -2%;
+            }
+
+            li {
+                .dot {
+                    width: 15px;
+                    height: 15px;
+                    background: $color-white;
+                    border-radius: 50%;
+                    opacity: .25;
+                    display: inline-block;
+                    margin: 0rem 1rem;
+                    margin-top: 3rem;
+
+                    &:hover,
+                    &:focus,
+                    &.active {
+                        opacity: 1;
+                        box-shadow: 0 0 0 10px hsla(0, 0%, 86%, 0.1);
+                        transition: 0.6s cubic-bezier(0.45, 0, 0.55, 1);
+                    }
+                }
+            }
+        }
+
         .text__info {
             h1 {
                 font-family: $font-base-family-3;
@@ -94,8 +164,12 @@
                 text-transform: $text-transfrom-upper;
 
                 @include media('>=tablet') {
-                    font-size: $font-size-v5;
-                    margin-top: 1rem;
+                    margin-top: 4rem;
+                }
+
+                @include media('>=smallDesktop') {
+                    text-align: left;
+                    font-size: $font-size-v4;
                 }
 
                 span {
@@ -103,8 +177,8 @@
                     opacity: .5;
                     font-family: $font-base-family-3;
 
-                    @include media('>=tablet') {
-                        font-size: $font-size-v8;
+                    @include media('>=smallDesktop') {
+                        font-size: $font-size-v6;
                     }
                 }
             }
@@ -115,8 +189,12 @@
                 text-align: center;
 
                 @include media('>=tablet') {
-                    font-size: $font-size-v12;
                     width: 460px;
+                }
+
+                @include media('>=smallDesktop') {
+                    text-align: left;
+                    font-size: $font-size-v10;
                 }
             }
         }

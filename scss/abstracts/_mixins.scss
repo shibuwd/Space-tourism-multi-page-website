@@ -18,32 +18,27 @@
 
 @mixin navbarHover {
 
-    &:before,
-    &:after {
+    &::after {
         content: '';
         position: absolute;
-        top: 195%;
+        bottom: -100%;
         width: 0%;
-
-        border-bottom: 3px solid white;
+        left: 0%;
+        border-bottom: 3px solid $color-white;
         background: none;
         transition: .8s cubic-bezier(0.5, 1, 0.89, 1);
+        display: block;
     }
 
-    // &:before {
-    //     left: 50%;
-    // }
-
-    &:after {
-        right: 0%;
+    &:hover::after,
+    &:focus::after {
+        opacity: .5;
+        width: 100%;
+        border-bottom: 3px solid $color-white
     }
-
-    &:hover:before,
-    &:focus:before,
-    &:hover:after,
-    &:focus:after {
-        width: 50%;
-        background: $color-white;
+    
+    &.active__link::after {
+        width: 100%;
     }
 }
 

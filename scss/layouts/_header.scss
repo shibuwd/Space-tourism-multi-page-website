@@ -51,7 +51,7 @@
                 justify-content: center;
             }
 
-            ul {
+            #nav__list {
                 position: absolute;
                 background: rgba(56, 54, 54, 0.698);
                 -webkit-backdrop-filter: blur(15px);
@@ -95,11 +95,6 @@
                         padding: 1rem 2rem;
                     }
 
-                    // @include media('>smallDesktop') {
-                    //     padding: 1rem 2rem;
-                    // }
-
-
                     @include media('>largePhone') {
                         display: flex;
                         align-items: center;
@@ -108,11 +103,10 @@
                         height: 76px;
                     }
 
-                    a {
+                    .navbar__link {
                         position: relative;
                         color: $color-white;
                         text-transform: uppercase;
-                        // line-height: 55px;
                         margin-bottom: 2rem;
                         display: block;
                         font-family: $font-base-family-2;
@@ -128,7 +122,8 @@
                         @include media('>=tablet') {
                             margin: 0 auto
                         }
-                        @include navbarHover; 
+
+                        @include navbarHover;
 
                         span {
                             font-weight: $font-weight-700;

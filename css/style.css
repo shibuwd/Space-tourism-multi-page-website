@@ -976,7 +976,7 @@ li {
     width: 80px;
     height: 80px;
     font-size: 2rem;
-    margin: 2rem;
+    margin: 2.5rem;
   }
 }
 .tech .tech__bottom .page__links li .active {
@@ -1014,9 +1014,10 @@ li {
     font-size: 2.5rem;
   }
 }
-@media (min-width: 768px) {
+@media (min-width: 1150px) {
   .tech .tech__bottom .text__info h1 {
     font-size: 3.5rem;
+    margin-top: 0.5rem;
   }
 }
 .tech .tech__bottom .text__info p {

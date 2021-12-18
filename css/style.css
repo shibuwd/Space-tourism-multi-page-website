@@ -309,6 +309,7 @@ li {
   font-size: 5rem;
   line-height: 90px;
   padding: 0;
+  font-weight: 400;
 }
 @media (min-width: 768px) {
   .hero-container .space .space-desc h1 {
@@ -440,7 +441,7 @@ li {
   font-size: 1.125rem;
   text-transform: uppercase;
   font-family: "Barlow Condensed";
-  letter-spacing: 2.7px;
+  letter-spacing: 2.4;
   font-weight: 400;
   line-height: 20px;
   margin-top: 2rem;
@@ -800,6 +801,7 @@ li {
   text-align: center;
   margin-top: 2rem;
   text-transform: uppercase;
+  font-weight: 400;
 }
 @media (min-width: 768px) {
   .crew .crew__bottom .text__info h1 {

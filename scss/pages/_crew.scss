@@ -162,6 +162,7 @@
                 text-align: center;
                 margin-top: 2rem;
                 text-transform: $text-transfrom-upper;
+                font-weight: $font-weight-400;
 
                 @include media('>=tablet') {
                     margin-top: 4rem;

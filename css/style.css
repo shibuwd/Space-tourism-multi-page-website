@@ -1,4 +1,5 @@
 @import url("https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@400;700&family=Barlow:wght@400;700&family=Bellefair&display=swap");
+
 *,
 *::after,
 *::before {
@@ -37,6 +38,7 @@ li {
   height: auto;
   background-color: transparent;
 }
+
 #header .header .nav-bar {
   margin-top: 0.6rem;
   display: flex;
@@ -45,22 +47,26 @@ li {
   width: 100%;
   height: 100%;
 }
+
 @media (min-width: 576px) {
   #header .header .nav-bar {
     margin-top: 0;
   }
 }
+
 @media (min-width: 1151px) {
   #header .header .nav-bar {
     margin-top: 2rem;
   }
 }
+
 #header .header .nav-bar .brand {
   z-index: 9;
   height: 48px;
   width: 48px;
   margin-left: 1.2rem;
 }
+
 @media (min-width: 1151px) {
   #header .header .nav-bar .nav-line {
     position: absolute;
@@ -72,6 +78,7 @@ li {
     z-index: 1;
   }
 }
+
 @media (min-width: 576px) {
   #header .header .nav-bar {
     height: 75px;
@@ -80,6 +87,7 @@ li {
     justify-content: space-between;
   }
 }
+
 @media (min-width: 576px) {
   #header .header .nav-bar .nav-list {
     display: flex;
@@ -87,6 +95,7 @@ li {
     justify-content: center;
   }
 }
+
 #header .header .nav-bar .nav-list #nav__list {
   position: absolute;
   background: rgba(56, 54, 54, 0.698);
@@ -106,6 +115,7 @@ li {
   transition: 0.6s cubic-bezier(0, 0.55, 0.45, 1) left;
   z-index: 3;
 }
+
 @media (min-width: 576px) {
   #header .header .nav-bar .nav-list #nav__list {
     position: initial;
@@ -118,19 +128,23 @@ li {
     padding-right: 0rem;
   }
 }
+
 #header .header .nav-bar .nav-list #nav__list.active {
   left: 25%;
 }
+
 @media (min-width: 576px) {
   #header .header .nav-bar .nav-list #nav__list li {
     padding: 1rem 0.8rem;
   }
 }
+
 @media (min-width: 768px) {
   #header .header .nav-bar .nav-list #nav__list li {
     padding: 1rem 2rem;
   }
 }
+
 @media (min-width: 576px) {
   #header .header .nav-bar .nav-list #nav__list li {
     display: flex;
@@ -140,6 +154,7 @@ li {
     height: 76px;
   }
 }
+
 #header .header .nav-bar .nav-list #nav__list li .navbar__link {
   position: relative;
   color: white;
@@ -152,16 +167,19 @@ li {
   letter-spacing: 2.7px;
   padding-left: 0.938rem;
 }
+
 @media (min-width: 576px) {
   #header .header .nav-bar .nav-list #nav__list li .navbar__link {
     padding-left: 0;
   }
 }
+
 @media (min-width: 768px) {
   #header .header .nav-bar .nav-list #nav__list li .navbar__link {
     margin: 0 auto;
   }
 }
+
 #header .header .nav-bar .nav-list #nav__list li .navbar__link::after {
   content: "";
   position: absolute;
@@ -173,22 +191,28 @@ li {
   transition: 0.8s cubic-bezier(0.5, 1, 0.89, 1);
   display: block;
 }
-#header .header .nav-bar .nav-list #nav__list li .navbar__link:hover::after, #header .header .nav-bar .nav-list #nav__list li .navbar__link:focus::after {
+
+#header .header .nav-bar .nav-list #nav__list li .navbar__link:hover::after,
+#header .header .nav-bar .nav-list #nav__list li .navbar__link:focus::after {
   opacity: 0.5;
   width: 100%;
   border-bottom: 3px solid white;
 }
+
 #header .header .nav-bar .nav-list #nav__list li .navbar__link.active__link::after {
   width: 100%;
 }
+
 #header .header .nav-bar .nav-list #nav__list li .navbar__link span {
   font-weight: 700;
 }
+
 @media (min-width: 576px) {
   #header .header .nav-bar .nav-list #nav__list li .navbar__link span {
     margin-right: 0.2rem;
   }
 }
+
 #header .header .nav-bar .nav-list .hamburger {
   height: 60px;
   width: 60px;
@@ -200,11 +224,13 @@ li {
   z-index: 10;
   cursor: pointer;
 }
+
 @media (min-width: 576px) {
   #header .header .nav-bar .nav-list .hamburger {
     display: none;
   }
 }
+
 #header .header .nav-bar .nav-list .hamburger:after {
   position: absolute;
   content: "";
@@ -212,6 +238,7 @@ li {
   width: 100%;
   animation: hamburger_puls 3s ease infinite;
 }
+
 #header .header .nav-bar .nav-list .hamburger .bar {
   height: 3px;
   width: 30px;
@@ -219,7 +246,9 @@ li {
   background-color: white;
   z-index: -1;
 }
-#header .header .nav-bar .nav-list .hamburger .bar::after, #header .header .nav-bar .nav-list .hamburger .bar::before {
+
+#header .header .nav-bar .nav-list .hamburger .bar::after,
+#header .header .nav-bar .nav-list .hamburger .bar::before {
   content: "";
   position: absolute;
   height: 100%;
@@ -229,15 +258,19 @@ li {
   transition: 0.3s ease;
   transition-property: top, bottom;
 }
+
 #header .header .nav-bar .nav-list .hamburger .bar::after {
   top: 8px;
 }
+
 #header .header .nav-bar .nav-list .hamburger .bar::before {
   bottom: 8px;
 }
+
 #header .header .nav-bar .nav-list .hamburger.active .bar::before {
   bottom: 0;
 }
+
 #header .header .nav-bar .nav-list .hamburger.active .bar::after {
   top: 0;
 }
@@ -251,6 +284,7 @@ li {
   align-items: center;
   justify-content: center;
 }
+
 .hero-container .hero-img {
   position: relative;
   background-position: center;
@@ -260,27 +294,32 @@ li {
   width: 100vw;
   background-image: url(../../assets/home/background-home-mobile.jpg);
 }
+
 @media (min-width: 768px) {
   .hero-container .hero-img {
     background-image: url(../../assets/home/background-home-tablet.jpg);
   }
 }
+
 @media (min-width: 1150px) {
   .hero-container .hero-img {
     background-image: url(../../assets/home/background-home-desktop.jpg);
   }
 }
+
 .hero-container .space {
   position: absolute;
   margin-top: 2.5rem;
   width: 100vw;
 }
+
 @media (min-width: 768px) {
   .hero-container .space {
     margin: 0 auto;
     margin-top: 2rem;
   }
 }
+
 @media (min-width: 1150px) {
   .hero-container .space {
     padding: 0 2rem;
@@ -292,17 +331,20 @@ li {
     text-align: left;
   }
 }
+
 .hero-container .space .space-desc span {
   font-family: "Barlow Condensed";
   font-size: 1rem;
   letter-spacing: 2.7px;
   text-transform: uppercase;
 }
+
 @media (min-width: 576px) {
   .hero-container .space .space-desc span {
     font-size: 1.25rem;
   }
 }
+
 .hero-container .space .space-desc h1 {
   font-family: "Bellefair";
   text-transform: uppercase;
@@ -311,6 +353,7 @@ li {
   padding: 0;
   font-weight: 400;
 }
+
 @media (min-width: 768px) {
   .hero-container .space .space-desc h1 {
     font-size: 9.375rem;
@@ -318,11 +361,13 @@ li {
     margin-top: 2rem;
   }
 }
+
 .hero-container .space .space-desc p {
   font-size: 0.938rem;
   line-height: 25px;
   padding: 0 1.3rem;
 }
+
 @media (min-width: 768px) {
   .hero-container .space .space-desc p {
     font-size: 1.125rem;
@@ -331,6 +376,7 @@ li {
     padding: 2rem 0;
   }
 }
+
 .hero-container .space .explore-btn {
   text-align: center;
   font-family: "Bellefair";
@@ -349,10 +395,13 @@ li {
   cursor: pointer;
   z-index: 10;
 }
-.hero-container .space .explore-btn:hover, .hero-container .space .explore-btn:focus {
+
+.hero-container .space .explore-btn:hover,
+.hero-container .space .explore-btn:focus {
   box-shadow: 0 0 0 50px rgba(219, 219, 219, 0.1);
   transition: 0.6s cubic-bezier(0.45, 0, 0.55, 1);
 }
+
 @media (min-width: 768px) {
   .hero-container .space .explore-btn {
     margin: 0;
@@ -361,6 +410,7 @@ li {
     margin: 0 auto;
   }
 }
+
 @media (min-width: 1151px) {
   .hero-container .space .explore-btn {
     margin: 0;
@@ -378,6 +428,7 @@ li {
   align-items: center;
   justify-content: center;
 }
+
 .destination__bg .container__img {
   position: relative;
   background-position: center;
@@ -388,12 +439,14 @@ li {
   height: 926px;
   background-image: url(../../assets/destination/background-destination-mobile.jpg);
 }
+
 @media (min-width: 768px) {
   .destination__bg .container__img {
     background-image: url(../../assets/destination/background-destination-tablet.jpg);
     height: 100vh;
   }
 }
+
 @media (min-width: 1150px) {
   .destination__bg .container__img {
     background-image: url(../../assets/destination/background-destination-desktop.jpg);
@@ -413,6 +466,7 @@ li {
   margin-top: 1rem;
   width: 100vw;
 }
+
 @media (min-width: 1151px) {
   .destination {
     display: flex;
@@ -424,11 +478,13 @@ li {
     padding: 4rem;
   }
 }
+
 @media (min-width: 1151px) {
   .destination .destination__top {
     margin-right: 8rem;
   }
 }
+
 @media (min-width: 576px) {
   .destination .destination__top {
     display: flex;
@@ -437,6 +493,7 @@ li {
     justify-content: center;
   }
 }
+
 .destination .destination__top h4 {
   font-size: 1.125rem;
   text-transform: uppercase;
@@ -446,22 +503,26 @@ li {
   line-height: 20px;
   margin-top: 2rem;
 }
+
 @media (min-width: 576px) {
   .destination .destination__top h4 {
     font-size: 1.25rem;
     margin-bottom: 1rem;
   }
 }
+
 @media (min-width: 1151px) {
   .destination .destination__top h4 {
     font-size: 1.75rem;
     letter-spacing: 4.7px;
   }
 }
+
 .destination .destination__top h4 span {
   font-weight: 700;
   opacity: 25%;
 }
+
 .destination .destination__top .destination__place {
   background-position: center;
   background-repeat: no-repeat;
@@ -471,18 +532,21 @@ li {
   margin: 0 auto;
   margin-top: 2.5rem;
 }
+
 @media (min-width: 768px) {
   .destination .destination__top .destination__place {
     width: 300px;
     height: 300px;
   }
 }
+
 @media (min-width: 1151px) {
   .destination .destination__top .destination__place {
     width: 445px;
     height: 445px;
   }
 }
+
 .destination .destination__bottom .page__links {
   display: flex;
   align-items: center;
@@ -490,11 +554,13 @@ li {
   flex-direction: row;
   margin: 1.2rem 0;
 }
+
 @media (min-width: 1151px) {
   .destination .destination__bottom .page__links {
     margin-right: 1.8rem;
   }
 }
+
 .destination .destination__bottom .page__links li a {
   font-family: "Barlow Condensed";
   font-size: 0.875rem;
@@ -505,6 +571,7 @@ li {
   position: relative;
   display: block;
 }
+
 .destination .destination__bottom .page__links li a::after {
   content: "";
   position: absolute;
@@ -516,41 +583,50 @@ li {
   transition: 0.8s cubic-bezier(0.5, 1, 0.89, 1);
   display: block;
 }
-.destination .destination__bottom .page__links li a:hover::after, .destination .destination__bottom .page__links li a:focus::after {
+
+.destination .destination__bottom .page__links li a:hover::after,
+.destination .destination__bottom .page__links li a:focus::after {
   opacity: 0.5;
   width: 100%;
   border-bottom: 3px solid white;
 }
+
 .destination .destination__bottom .page__links li a.active__link::after {
   width: 100%;
 }
+
 @media (min-width: 576px) {
   .destination .destination__bottom .page__links li a {
     font-size: 1rem;
   }
 }
+
 .destination .destination__bottom .text__info h1 {
   font-family: "Bellefair";
   font-size: 3.5rem;
   text-transform: uppercase;
   text-align: center;
 }
+
 @media (min-width: 576px) {
   .destination .destination__bottom .text__info h1 {
     font-size: 5rem;
   }
 }
+
 @media (min-width: 768px) {
   .destination .destination__bottom .text__info h1 {
     font-size: 6.25rem;
     margin-top: 2rem;
   }
 }
+
 @media (min-width: 1150px) {
   .destination .destination__bottom .text__info h1 {
     text-align: left;
   }
 }
+
 .destination .destination__bottom .text__info p {
   font-family: "Barlow";
   line-height: 25px;
@@ -558,6 +634,7 @@ li {
   text-align: center;
   margin-bottom: 2rem;
 }
+
 @media (min-width: 576px) {
   .destination .destination__bottom .text__info p {
     font-size: 1rem;
@@ -565,21 +642,25 @@ li {
     width: 570px;
   }
 }
+
 @media (min-width: 1151px) {
   .destination .destination__bottom .text__info p {
     text-align: left;
     width: 444px;
   }
 }
+
 @media (min-width: 576px) {
   .destination .destination__bottom .text__info p {
     font-size: 1.125rem;
   }
 }
+
 .destination .destination__bottom .text__info .line {
   border: 1px solid white;
   opacity: 0.25;
 }
+
 .destination .destination__bottom .text__info .travel-info h2,
 .destination .destination__bottom .text__info .travel-info h3 {
   font-family: "Bellefair";
@@ -590,6 +671,7 @@ li {
   flex-direction: column;
   margin-top: 1rem;
 }
+
 .destination .destination__bottom .text__info .travel-info h2 span,
 .destination .destination__bottom .text__info .travel-info h3 span {
   font-family: "Barlow Condensed";
@@ -598,12 +680,15 @@ li {
   line-height: 2rem;
   letter-spacing: 2.7px;
 }
+
 @media (min-width: 1151px) {
+
   .destination .destination__bottom .text__info .travel-info h2,
-.destination .destination__bottom .text__info .travel-info h3 {
+  .destination .destination__bottom .text__info .travel-info h3 {
     font-size: 1.75rem;
   }
 }
+
 @media (min-width: 576px) {
   .destination .destination__bottom .text__info .travel-info {
     display: flex;
@@ -613,11 +698,13 @@ li {
     margin-top: 1.5rem;
   }
 }
+
 @media (min-width: 1151px) {
   .destination .destination__bottom .text__info .travel-info {
     justify-content: space-between;
   }
 }
+
 @media (min-width: 1151px) {
   .destination .destination__bottom .text__info {
     margin-left: 7rem;
@@ -633,6 +720,7 @@ li {
   align-items: center;
   justify-content: center;
 }
+
 .crew__bg .container__img {
   position: relative;
   background-position: center;
@@ -643,11 +731,13 @@ li {
   min-height: 100vh;
   background-image: url(../../assets/crew/background-crew-mobile.jpg);
 }
+
 @media (min-width: 768px) {
   .crew__bg .container__img {
     background-image: url(../../assets/crew/background-crew-tablet.jpg);
   }
 }
+
 @media (min-width: 1150px) {
   .crew__bg .container__img {
     background-image: url(../../assets/crew/background-crew-desktop.jpg);
@@ -665,6 +755,7 @@ li {
   margin-top: 1rem;
   width: 100vw;
 }
+
 .crew h2 {
   font-size: 1.125rem;
   text-transform: uppercase;
@@ -677,6 +768,7 @@ li {
   margin-bottom: 3rem;
   position: relative;
 }
+
 @media (min-width: 768px) {
   .crew h2 {
     position: absolute;
@@ -685,6 +777,7 @@ li {
     margin-top: 3rem;
   }
 }
+
 @media (min-width: 1150px) {
   .crew h2 {
     right: 76%;
@@ -693,10 +786,12 @@ li {
     font-size: 1.75rem;
   }
 }
+
 .crew h2 span {
   font-weight: 700;
   opacity: 25%;
 }
+
 @media (min-width: 768px) {
   .crew {
     display: flex;
@@ -705,6 +800,7 @@ li {
     flex-direction: column-reverse;
   }
 }
+
 .crew .crew__top .crew__img {
   width: 177px;
   height: 222px;
@@ -714,6 +810,7 @@ li {
   background-size: contain;
   overflow: hidden;
 }
+
 @media (min-width: 768px) {
   .crew .crew__top .crew__img {
     width: 456px;
@@ -722,6 +819,7 @@ li {
     overflow: hidden;
   }
 }
+
 @media (min-width: 1150px) {
   .crew .crew__top .crew__img {
     right: -70%;
@@ -731,6 +829,7 @@ li {
     overflow: hidden;
   }
 }
+
 @media (min-width: 1440px) {
   .crew .crew__top .crew__img {
     width: 568.07px;
@@ -738,6 +837,7 @@ li {
     top: 4rem;
   }
 }
+
 .crew .crew__top .crew__img .line {
   position: absolute;
   width: 350px;
@@ -746,11 +846,13 @@ li {
   border-bottom: 1px solid white;
   opacity: 0.25;
 }
+
 @media (min-width: 768px) {
   .crew .crew__top .crew__img .line {
     border: none;
   }
 }
+
 @media (min-width: 768px) {
   .crew .crew__bottom {
     display: flex;
@@ -759,18 +861,21 @@ li {
     flex-direction: column-reverse;
   }
 }
+
 @media (min-width: 1150px) {
   .crew .crew__bottom {
     position: absolute;
     left: 8%;
   }
 }
+
 .crew .crew__bottom .page__links {
   display: flex;
   align-items: center;
   justify-content: center;
   position: relative;
 }
+
 @media (min-width: 1150px) {
   .crew .crew__bottom .page__links {
     position: absolute;
@@ -778,6 +883,7 @@ li {
     left: -2%;
   }
 }
+
 .crew .crew__bottom .page__links li .dot {
   width: 15px;
   height: 15px;
@@ -788,11 +894,15 @@ li {
   margin: 0rem 1rem;
   margin-top: 3rem;
 }
-.crew .crew__bottom .page__links li .dot:hover, .crew .crew__bottom .page__links li .dot:focus, .crew .crew__bottom .page__links li .dot.active {
+
+.crew .crew__bottom .page__links li .dot:hover,
+.crew .crew__bottom .page__links li .dot:focus,
+.crew .crew__bottom .page__links li .dot.active {
   opacity: 1;
   box-shadow: 0 0 0 10px rgba(219, 219, 219, 0.1);
   transition: 0.6s cubic-bezier(0.45, 0, 0.55, 1);
 }
+
 .crew .crew__bottom .text__info h1 {
   font-family: "Bellefair";
   font-size: 1.5rem;
@@ -803,37 +913,44 @@ li {
   text-transform: uppercase;
   font-weight: 400;
 }
+
 @media (min-width: 768px) {
   .crew .crew__bottom .text__info h1 {
     margin-top: 4rem;
   }
 }
+
 @media (min-width: 1150px) {
   .crew .crew__bottom .text__info h1 {
     text-align: left;
     font-size: 3.5rem;
   }
 }
+
 .crew .crew__bottom .text__info h1 span {
   font-size: 1rem;
   opacity: 0.5;
   font-family: "Bellefair";
 }
+
 @media (min-width: 1150px) {
   .crew .crew__bottom .text__info h1 span {
     font-size: 2rem;
   }
 }
+
 .crew .crew__bottom .text__info p {
   margin-top: 2rem;
   font-size: 0.938rem;
   text-align: center;
 }
+
 @media (min-width: 768px) {
   .crew .crew__bottom .text__info p {
     width: 460px;
   }
 }
+
 @media (min-width: 1150px) {
   .crew .crew__bottom .text__info p {
     text-align: left;
@@ -850,6 +967,7 @@ li {
   align-items: center;
   justify-content: center;
 }
+
 .tech__bg .container__img {
   position: relative;
   background-position: center;
@@ -860,11 +978,13 @@ li {
   min-height: 667px;
   background-image: url(../../assets/technology/background-technology-mobile.jpg);
 }
+
 @media (min-width: 768px) {
   .tech__bg .container__img {
     background-image: url(../../assets/technology/background-technology-tablet.jpg);
   }
 }
+
 @media (min-width: 1150px) {
   .tech__bg .container__img {
     background-image: url(../../assets/technology/background-technology-desktop.jpg);
@@ -883,6 +1003,7 @@ li {
   width: 100vw;
   padding: 0;
 }
+
 @media (min-width: 1150px) {
   .tech {
     display: flex;
@@ -891,28 +1012,34 @@ li {
     flex-direction: row-reverse;
   }
 }
+
 .tech .tech__top {
   margin: 2.5rem 0;
 }
+
 @media (min-width: 768px) {
   .tech .tech__top {
     margin-top: 6.5rem;
   }
 }
+
 @media (min-width: 1150px) {
   .tech .tech__top {
     margin-top: 5%;
   }
 }
+
 @media (min-width: 1440px) {
   .tech .tech__top {
     margin-top: 10%;
   }
 }
+
 .tech .tech__bottom {
   padding: 0 1.5rem;
   text-align: center;
 }
+
 @media (min-width: 1150px) {
   .tech .tech__bottom {
     display: flex;
@@ -920,6 +1047,7 @@ li {
     justify-content: center;
   }
 }
+
 .tech .tech__bottom h2 {
   font-family: "Barlow Condensed";
   font-size: 1rem;
@@ -930,10 +1058,12 @@ li {
   top: -1%;
   left: 30%;
 }
+
 .tech .tech__bottom h2 span {
   font-weight: 700;
   opacity: 0.25;
 }
+
 @media (min-width: 768px) {
   .tech .tech__bottom h2 {
     font-size: 1.25rem;
@@ -941,21 +1071,25 @@ li {
     top: 3.5%;
   }
 }
+
 @media (min-width: 1150px) {
   .tech .tech__bottom h2 {
     font-size: 1.75rem;
   }
 }
+
 .tech .tech__bottom .page__links {
   display: flex;
   align-items: center;
   justify-content: center;
 }
+
 @media (min-width: 1150px) {
   .tech .tech__bottom .page__links {
     display: block;
   }
 }
+
 .tech .tech__bottom .page__links li .dot {
   font-family: "Bellefair";
   font-size: 1rem;
@@ -970,9 +1104,11 @@ li {
   justify-content: center;
   transition: 0.6s cubic-bezier(0.61, 1, 0.88, 1);
 }
+
 .tech .tech__bottom .page__links li .dot:hover {
   border: 1px solid white;
 }
+
 @media (min-width: 1150px) {
   .tech .tech__bottom .page__links li .dot {
     width: 80px;
@@ -981,17 +1117,20 @@ li {
     margin: 2.5rem;
   }
 }
+
 .tech .tech__bottom .page__links li .active {
   background-color: white;
   color: #0c0e18;
   border: 1px solid white;
 }
+
 @media (min-width: 1150px) {
   .tech .tech__bottom .text__info {
     display: block;
     text-align: left;
   }
 }
+
 .tech .tech__bottom .text__info h1 {
   font-family: "Bellefair";
   font-size: 1.5rem;
@@ -1001,38 +1140,45 @@ li {
   flex-direction: column;
   margin-top: 2rem;
 }
+
 .tech .tech__bottom .text__info h1 span {
   font-family: "Barlow Condensed";
   font-size: 0.875rem;
   letter-spacing: 2.4px;
 }
+
 @media (min-width: 768px) {
   .tech .tech__bottom .text__info h1 span {
     font-size: 0.938rem;
   }
 }
+
 @media (min-width: 768px) {
   .tech .tech__bottom .text__info h1 {
     font-size: 2.5rem;
   }
 }
+
 @media (min-width: 1150px) {
   .tech .tech__bottom .text__info h1 {
     font-size: 3.5rem;
     margin-top: 0.5rem;
   }
 }
+
 .tech .tech__bottom .text__info p {
   font-size: 0.938rem;
   line-height: 25px;
   margin-top: 1rem;
 }
+
 @media (min-width: 768px) {
   .tech .tech__bottom .text__info p {
     font-size: 1rem;
     width: 460px;
   }
 }
+
 @media (min-width: 1150px) {
   .tech .tech__bottom .text__info p {
     font-size: 1.125rem;

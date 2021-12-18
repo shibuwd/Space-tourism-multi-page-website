@@ -24,18 +24,39 @@
     @include heroImgPostion;
     padding: 0;
 
+    @include media('>=smallDesktop') {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        flex-direction: row-reverse;
+    }
+
     .tech__top {
         margin: 2.5rem 0;
-        width: 100vw;
 
         @include media('>=tablet') {
             margin-top: 6.5rem;
+        }
+
+        @include media('>=smallDesktop') {
+            margin-top: 5%;
+        }
+
+        @include media('>=midDesktop') {
+            margin-top: 10%;
         }
     }
 
     .tech__bottom {
         padding: 0 1.5rem;
         text-align: center;
+
+        @include media('>=smallDesktop') {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+
+        }
 
         h2 {
             font-family: $font-base-family-2;
@@ -57,12 +78,21 @@
                 left: 4%;
                 top: 3.5%;
             }
+
+            @include media('>=smallDesktop') {
+                font-size: $font-size-v7;
+
+            }
         }
 
         .page__links {
             display: flex;
             align-items: center;
             justify-content: center;
+
+            @include media('>=smallDesktop') {
+                display: block;
+            }
 
             li {
                 .dot {
@@ -82,6 +112,13 @@
                     &:hover {
                         border: 1px solid $color-white;
                     }
+
+                    @include media('>=smallDesktop') {
+                        width: 80px;
+                        height: 80px;
+                        font-size: $font-size-v6;
+                        margin: 2rem;
+                    }
                 }
 
                 .active {
@@ -93,6 +130,12 @@
         }
 
         .text__info {
+
+            @include media('>=smallDesktop') {
+                display: block;
+                text-align: left;
+            }
+
             h1 {
                 font-family: $font-base-family-3;
                 font-size: $font-size-v8;
@@ -115,6 +158,10 @@
                 @include media('>=tablet') {
                     font-size: $font-size-v5;
                 }
+
+                @include media('>=tablet') {
+                    font-size: $font-size-v4;
+                }
             }
 
             p {
@@ -125,6 +172,12 @@
                 @include media('>=tablet') {
                     font-size: $font-size-v11;
                     width: 460px;
+                }
+
+                @include media('>=smallDesktop') {
+                    font-size: $font-size-v10;
+                    width: 445px;
+                    line-height: 32px;
                 }
             }
         }

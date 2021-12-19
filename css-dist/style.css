@@ -331,40 +331,30 @@ li {
     padding: 2rem 0;
   }
 }
-.hero-container .space .large-btn {
+.hero-container .space .explore-btn {
+  text-align: center;
   font-family: "Bellefair";
-  text-transform: uppercase;
   font-size: 1.25rem;
+  text-transform: uppercase;
   color: #0c0e18;
-  font-weight: 400;
-  position: relative;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  margin: 0 auto;
-  z-index: 1;
-  background-color: white;
   height: 150px;
   width: 150px;
   border-radius: 50%;
-  margin-top: 3rem;
+  background-color: white;
+  margin: 0 auto;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-top: 3.5rem;
+  cursor: pointer;
+  z-index: 10;
 }
-.hero-container .space .large-btn::after {
-  content: "";
-  position: absolute;
-  z-index: -1;
-  width: 100%;
-  height: 100%;
-  background-color: rgba(255, 255, 255, 0.15);
-  border-radius: 50%;
-  transition: transform 0.6s cubic-bezier(0.45, 0, 0.55, 1);
-}
-.hero-container .space .large-btn:hover::after, .hero-container .space .large-btn:focus::after {
-  opacity: 1;
-  transform: scale(1.5);
+.hero-container .space .explore-btn:hover, .hero-container .space .explore-btn:focus {
+  box-shadow: 0 0 0 50px rgba(219, 219, 219, 0.1);
+  transition: 0.6s cubic-bezier(0.45, 0, 0.55, 1);
 }
 @media (min-width: 768px) {
-  .hero-container .space .large-btn {
+  .hero-container .space .explore-btn {
     margin: 0;
     height: 250px;
     width: 250px;
@@ -372,11 +362,10 @@ li {
   }
 }
 @media (min-width: 1151px) {
-  .hero-container .space .large-btn {
+  .hero-container .space .explore-btn {
     margin: 0;
     height: 275px;
     width: 275px;
-    font-size: 2rem;
   }
 }
 
@@ -471,7 +460,7 @@ li {
 }
 .destination .destination__top h4 span {
   font-weight: 700;
-  opacity: 0.25;
+  opacity: 25%;
 }
 .destination .destination__top .destination__place {
   background-position: center;
@@ -706,7 +695,7 @@ li {
 }
 .crew h2 span {
   font-weight: 700;
-  opacity: 0.25;
+  opacity: 25%;
 }
 @media (min-width: 768px) {
   .crew {
@@ -827,7 +816,7 @@ li {
 }
 .crew .crew__bottom .text__info h1 span {
   font-size: 1rem;
-  opacity: 0.25;
+  opacity: 0.5;
   font-family: "Bellefair";
 }
 @media (min-width: 1150px) {

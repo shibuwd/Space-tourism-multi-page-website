@@ -49,7 +49,7 @@
 
         span {
             font-weight: $font-weight-700;
-            opacity: 25%;
+            opacity: $color-opacity;
         }
     }
 
@@ -97,7 +97,7 @@
                 top: 240px;
                 left: -83px;
                 border-bottom: 1px solid $color-white;
-                opacity: .25;
+                opacity: $color-opacity;
 
                 @include media('>=tablet') {
                     border: none;
@@ -137,7 +137,7 @@
                     height: 15px;
                     background: $color-white;
                     border-radius: 50%;
-                    opacity: .25;
+                    opacity: $color-opacity;
                     display: inline-block;
                     margin: 0rem 1rem;
                     margin-top: 3rem;
@@ -175,7 +175,7 @@
 
                 span {
                     font-size: $font-size-v11;
-                    opacity: .5;
+                    opacity: $color-opacity;
                     font-family: $font-base-family-3;
 
                     @include media('>=smallDesktop') {

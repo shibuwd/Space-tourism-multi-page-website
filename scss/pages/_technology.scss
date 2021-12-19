@@ -70,7 +70,7 @@
 
             span {
                 font-weight: $font-weight-700;
-                opacity: .25;
+                opacity: $color-opacity;
             }
 
             @include media('>=tablet') {

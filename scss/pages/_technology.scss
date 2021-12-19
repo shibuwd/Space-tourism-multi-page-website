@@ -14,6 +14,8 @@
 
         @include media('>=smallDesktop') {
             background-image: url(../../assets/technology/background-technology-desktop.jpg);
+            height: 100vh;
+            min-height: 768px;
         }
     }
 }

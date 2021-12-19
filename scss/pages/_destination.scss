@@ -131,6 +131,7 @@
                 font-size: $font-size-v4;
                 text-transform: $text-transfrom-upper;
                 text-align: center;
+                font-weight: $font-weight-400;
 
                 @include media('>largePhone') {
                     font-size: $font-size-v3;

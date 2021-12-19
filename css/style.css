@@ -545,6 +545,7 @@ li {
   font-size: 3.5rem;
   text-transform: uppercase;
   text-align: center;
+  font-weight: 400;
 }
 @media (min-width: 576px) {
   .destination .destination__bottom .text__info h1 {
@@ -879,6 +880,8 @@ li {
 @media (min-width: 1150px) {
   .tech__bg .container__img {
     background-image: url(../../assets/technology/background-technology-desktop.jpg);
+    height: 100vh;
+    min-height: 768px;
   }
 }
 

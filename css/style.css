@@ -408,7 +408,7 @@ li {
 @media (min-width: 1150px) {
   .destination__bg .container__img {
     background-image: url(../../assets/destination/background-destination-desktop.jpg);
-    max-height: 100vmax;
+    height: 100vh;
     min-height: 768px;
   }
 }
@@ -601,6 +601,7 @@ li {
   text-align: center;
   flex-direction: column;
   margin-top: 1rem;
+  font-weight: 400;
 }
 .destination .destination__bottom .text__info .travel-info h2 span,
 .destination .destination__bottom .text__info .travel-info h3 span {
@@ -663,6 +664,8 @@ li {
 @media (min-width: 1150px) {
   .crew__bg .container__img {
     background-image: url(../../assets/crew/background-crew-desktop.jpg);
+    height: 100vh;
+    min-height: 768px;
   }
 }
 
@@ -723,7 +726,7 @@ li {
   position: relative;
   background-position: center;
   background-repeat: no-repeat;
-  background-size: contain;
+  background-size: cover;
   overflow: hidden;
 }
 @media (min-width: 768px) {
@@ -738,9 +741,6 @@ li {
   .crew .crew__top .crew__img {
     right: -70%;
     top: 3.3rem;
-    Width: 425px;
-    Height: 544px;
-    overflow: hidden;
   }
 }
 @media (min-width: 1440px) {

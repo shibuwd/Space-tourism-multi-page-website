@@ -14,6 +14,8 @@
 
         @include media('>=smallDesktop') {
             background-image: url(../../assets/crew/background-crew-desktop.jpg);
+             height: 100vh;
+             min-height: 768px;
         }
     }
 }
@@ -67,7 +69,7 @@
             position: relative;
             background-position: center;
             background-repeat: no-repeat;
-            background-size: contain;
+            background-size: cover;
             overflow: hidden;
 
             @include media('>=tablet') {
@@ -80,9 +82,6 @@
             @include media('>=smallDesktop') {
                 right: -70%;
                 top: 3.3rem;
-                Width: 425px;
-                Height: 544px;
-                overflow: hidden;
             }
 
             @include media('>=midDesktop') {

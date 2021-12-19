@@ -15,8 +15,8 @@
 
         @include media('>=smallDesktop') {
             background-image: url(../../assets/destination/background-destination-desktop.jpg);
-            max-height: 100vmax;
-            min-height: 768px;
+             height: 100vh;
+             min-height: 768px;
         }
     }
 }
@@ -186,6 +186,7 @@
                     text-align: center;
                     flex-direction: column;
                     margin-top: 1rem;
+                    font-weight: $font-weight-400;
 
                     span {
                         font-family: $font-base-family-2;

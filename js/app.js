@@ -27,16 +27,3 @@ menu_item.forEach(item => {
 		mobile_menu.classList.toggle('active');
 	});
 });
-
-//active buttons
-
-// let navList = document.getElementById('nav__list');
-// let buttons = document.getElementsByClassName('navbar__link');
-
-// for (let i = 0; i < buttons.length; i++) {
-// 	buttons[i].addEventListener('click', function () {
-// 		let current = document.getElementsByClassName('active__link');
-// 		current[0].className = current[0].className.replace('active__link', '');
-// 		this.className += 'active__link';
-// 	});
-// }

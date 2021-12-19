@@ -907,7 +907,7 @@ li {
 }
 @media (min-width: 768px) {
   .tech .tech__top {
-    margin-top: 6.5rem;
+    margin-top: 20%;
   }
 }
 @media (min-width: 1150px) {

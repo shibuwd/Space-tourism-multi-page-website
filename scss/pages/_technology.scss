@@ -35,7 +35,7 @@
         margin: 2.5rem 0;
 
         @include media('>=tablet') {
-            margin-top: 6.5rem;
+            margin-top: 20%;
         }
 
         @include media('>=smallDesktop') {
@@ -55,7 +55,6 @@
             display: flex;
             align-items: center;
             justify-content: center;
-
         }
 
         h2 {
@@ -81,7 +80,6 @@
 
             @include media('>=smallDesktop') {
                 font-size: $font-size-v7;
-
             }
         }
 

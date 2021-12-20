@@ -4,8 +4,8 @@
     .container__img {
         @include heroImage;
         width: 100vw;
-        min-height: auto;
-        height: 926px;
+        height: 100vh;
+        min-height: 926px;
         background-image: url(../../assets/destination/background-destination-mobile.jpg);
 
         @include media('>=tablet') {

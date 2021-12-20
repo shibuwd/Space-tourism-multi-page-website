@@ -109,7 +109,9 @@
                     justify-content: center;
                     transition: 0.6s cubic-bezier(0.61, 1, 0.88, 1);
 
-                    &:hover {
+                    &:hover,
+                    &:focus,
+                    &.active__link {
                         border: 1px solid $color-white;
                     }
 

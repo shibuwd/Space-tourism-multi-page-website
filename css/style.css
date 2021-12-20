@@ -984,7 +984,7 @@ li {
   justify-content: center;
   transition: 0.6s cubic-bezier(0.61, 1, 0.88, 1);
 }
-.tech .tech__bottom .page__links li .dot:hover {
+.tech .tech__bottom .page__links li .dot:hover, .tech .tech__bottom .page__links li .dot:focus, .tech .tech__bottom .page__links li .dot.active__link {
   border: 1px solid white;
 }
 @media (min-width: 1150px) {

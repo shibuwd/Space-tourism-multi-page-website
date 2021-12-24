@@ -53,6 +53,11 @@
 
             #nav__list {
                 position: absolute;
+                content: '';
+                display: flex;
+                flex-direction: column;
+                justify-content: center;
+                align-items: flex-start;
                 background: rgba(56, 54, 54, 0.698);
                 -webkit-backdrop-filter: blur(15px);
                 backdrop-filter: blur(15px);
@@ -61,13 +66,8 @@
                 right: 0%;
                 left: -100%;
                 top: 0;
-                display: flex;
-                flex-direction: column;
-                justify-content: center;
-                align-items: flex-start;
-                z-index: 1;
                 overflow-x: hidden;
-                transition: .6s cubic-bezier(0, 0.55, 0.45, 1) left;
+                transition: .6s cubic-bezier(0, 0.55, 0.45, 1);
                 z-index: 3;
 
                 @include media('>largePhone') {
@@ -137,10 +137,9 @@
             }
 
             .hamburger {
+                position: relative;
                 height: 60px;
                 width: 60px;
-                display: inline-block;
-                position: relative;
                 display: flex;
                 align-items: center;
                 justify-content: center;
@@ -156,7 +155,6 @@
                     content: '';
                     height: 100%;
                     width: 100%;
-                    animation: hamburger_puls 3s ease infinite;
                 }
 
                 .bar {
@@ -175,7 +173,6 @@
                         left: 0;
                         background-color: $color-white;
                         transition: .3s ease;
-                        transition-property: top, bottom;
                     }
 
                     &::after {
@@ -188,11 +185,11 @@
                 }
             }
 
-            .hamburger.active .bar::before {
+            .hamburger.active ::before {
                 bottom: 0;
             }
 
-            .hamburger.active .bar::after {
+            .hamburger.active ::after {
                 top: 0;
             }
         }
